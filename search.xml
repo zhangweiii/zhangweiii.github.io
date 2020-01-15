@@ -69,25 +69,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript 扩展]]></title>
-    <url>%2F2018%2F03%2F12%2FExtendJS%2F</url>
-    <content type="text"><![CDATA[JavaScript 扩展记录备用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162(function (d, w, $) &#123; Date.prototype.addDays = function (days) &#123; var dat = new Date(this.valueOf()); dat.setDate(dat.getDate() + days); return dat; &#125; Date.prototype.AddMonth = function (numberOfMonths) &#123; var d = this; if (d.getMonth() + numberOfMonths + 1 === 0) &#123; d.setFullYear(d.getFullYear() - 1, 11); return d; &#125; else &#123; d.setMonth(d.getMonth() + numberOfMonths + 1); return d; &#125; &#125; Date.prototype.Format = function (fmt) &#123; var o = &#123; "M+": this.getMonth() + 1, "d+": this.getDate(), "h+": this.getHours(), "m+": this.getMinutes(), "s+": this.getSeconds(), "q+": Math.floor((this.getMonth() + 3) / 3), "S": this.getMilliseconds() &#125;; if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length)); for (var k in o) if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length))); return fmt; &#125; $.deepClone = function (source) &#123; if(!source || typeof source !== 'object')&#123; throw new Error('error arguments', 'shallowClone'); &#125; var targetObj = source.constructor === Array ? [] : &#123;&#125;; for(var keys in source)&#123; if(source.hasOwnProperty(keys))&#123; if(source[keys] &amp;&amp; typeof source[keys] === 'object')&#123; targetObj[keys] = source[keys].constructor === Array ? [] : &#123;&#125;; targetObj[keys] = $.deepClone(source[keys]); &#125;else&#123; targetObj[keys] = source[keys]; &#125; &#125; &#125; return targetObj; &#125; $.createElementFromHTML(htmlString) &#123; var div = document.createElement('div'); div.innerHTML = htmlString.trim(); // Change this to div.childNodes to support multiple top-level nodes return div.firstChild; &#125;&#125;)(document, window, $);]]></content>
+    <title><![CDATA[Git 常用操作]]></title>
+    <url>%2F2018%2F03%2F12%2FGit-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[Git 常用操作Git 是一个强大的分布式版本控制系统，但是命令相对复杂，这里记录常用命令 12345678910111213141516171819202122232425262728293031323334353637383940414243mkdir git-tutorial //新建文件夹git status //查看仓库的状态touch README.md //新建文件README.mdgit add README.md //将文件README.md添加到暂存区git log //显示git历史记录，注意所有log查看的内容都用Q键退出git log --pretty=short //显示git历史简要记录git log -p //显示git历史具体差别git log -p README.md //显示README.md文件的具体差别git diff README.md //比较README.md最近一次差别git diff HEAD //查看本次未提交和上次之间的差别，可以每次提交前执行次命令git branch //查看所有分支git checkout -b feature-A //建立一个名为feature-A的分支并切换到这个分支git branch feature-A //新建一个名为feature-A的分支git checkout feature-A //切换到feature-A分支git checkout - //切换到上一个分支git log --graph //以图表形式查看更改git merge --no-ff fix-B //当前分支合并fix-B，可能会存在冲突，解决就好了git reset --hard b8de79 //把git状态切换到b8de79的状态，b8de79是哈希值，可以从log里面获取git commit --amend //修改提交信息git commit -am 'commit message' //相当于add 和 commitgit rebase -i HEAD~2 //将最近2个提交合并，之后会出现一个文本，将pick修改为fixupgit submodule update --init --recursive //初始化并拉取子仓库]]></content>
       <categories>
-        <category>前端</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Python 常用]]></title>
-    <url>%2F2018%2F03%2F12%2FPython-%E5%B8%B8%E7%94%A8%E5%B0%8F%E4%B8%9C%E8%A5%BF%2F</url>
-    <content type="text"><![CDATA[Python 常用 本地开启FTP服务 python3 -m http.server 4321]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -102,14 +91,36 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Git 常用操作]]></title>
-    <url>%2F2018%2F03%2F12%2FGit-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[Git 常用操作Git 是一个强大的分布式版本控制系统，但是命令相对复杂，这里记录常用命令 12345678910111213141516171819202122232425262728293031323334353637383940414243mkdir git-tutorial //新建文件夹git status //查看仓库的状态touch README.md //新建文件README.mdgit add README.md //将文件README.md添加到暂存区git log //显示git历史记录，注意所有log查看的内容都用Q键退出git log --pretty=short //显示git历史简要记录git log -p //显示git历史具体差别git log -p README.md //显示README.md文件的具体差别git diff README.md //比较README.md最近一次差别git diff HEAD //查看本次未提交和上次之间的差别，可以每次提交前执行次命令git branch //查看所有分支git checkout -b feature-A //建立一个名为feature-A的分支并切换到这个分支git branch feature-A //新建一个名为feature-A的分支git checkout feature-A //切换到feature-A分支git checkout - //切换到上一个分支git log --graph //以图表形式查看更改git merge --no-ff fix-B //当前分支合并fix-B，可能会存在冲突，解决就好了git reset --hard b8de79 //把git状态切换到b8de79的状态，b8de79是哈希值，可以从log里面获取git commit --amend //修改提交信息git commit -am 'commit message' //相当于add 和 commitgit rebase -i HEAD~2 //将最近2个提交合并，之后会出现一个文本，将pick修改为fixupgit submodule update --init --recursive //初始化并拉取子仓库]]></content>
+    <title><![CDATA[Python 常用]]></title>
+    <url>%2F2018%2F03%2F12%2FPython-%E5%B8%B8%E7%94%A8%E5%B0%8F%E4%B8%9C%E8%A5%BF%2F</url>
+    <content type="text"><![CDATA[Python 常用 本地开启FTP服务 python3 -m http.server 4321]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript 扩展]]></title>
+    <url>%2F2018%2F03%2F12%2FExtendJS%2F</url>
+    <content type="text"><![CDATA[JavaScript 扩展记录备用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162(function (d, w, $) &#123; Date.prototype.addDays = function (days) &#123; var dat = new Date(this.valueOf()); dat.setDate(dat.getDate() + days); return dat; &#125; Date.prototype.AddMonth = function (numberOfMonths) &#123; var d = this; if (d.getMonth() + numberOfMonths + 1 === 0) &#123; d.setFullYear(d.getFullYear() - 1, 11); return d; &#125; else &#123; d.setMonth(d.getMonth() + numberOfMonths + 1); return d; &#125; &#125; Date.prototype.Format = function (fmt) &#123; var o = &#123; "M+": this.getMonth() + 1, "d+": this.getDate(), "h+": this.getHours(), "m+": this.getMinutes(), "s+": this.getSeconds(), "q+": Math.floor((this.getMonth() + 3) / 3), "S": this.getMilliseconds() &#125;; if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length)); for (var k in o) if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length))); return fmt; &#125; $.deepClone = function (source) &#123; if(!source || typeof source !== 'object')&#123; throw new Error('error arguments', 'shallowClone'); &#125; var targetObj = source.constructor === Array ? [] : &#123;&#125;; for(var keys in source)&#123; if(source.hasOwnProperty(keys))&#123; if(source[keys] &amp;&amp; typeof source[keys] === 'object')&#123; targetObj[keys] = source[keys].constructor === Array ? [] : &#123;&#125;; targetObj[keys] = $.deepClone(source[keys]); &#125;else&#123; targetObj[keys] = source[keys]; &#125; &#125; &#125; return targetObj; &#125; $.createElementFromHTML(htmlString) &#123; var div = document.createElement('div'); div.innerHTML = htmlString.trim(); // Change this to div.childNodes to support multiple top-level nodes return div.firstChild; &#125;&#125;)(document, window, $);]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nerdtree 快捷键]]></title>
+    <url>%2F2018%2F03%2F12%2Fnerdtree-%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[nerdtree 快捷键nerdtree 可以让你浏览文件系统并打开文件或目录。你可以通过键盘或鼠标控制它以树状图显示文件系统，也可以在其中进行一些简单的文件系统操作。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162ctrl + w + h 光标 focus 左侧树形目录ctrl + w + l 光标 focus 右侧文件显示窗口ctrl + w + w 光标自动在左右侧窗口切换 #！！！ctrl + w + r 移动当前窗口的布局位置o 在已有窗口中打开文件、目录或书签，并跳到该窗口go 在已有窗口 中打开文件、目录或书签，但不跳到该窗口t 在新 Tab 中打开选中文件/书签，并跳到新 TabT 在新 Tab 中打开选中文件/书签，但不跳到新 Tabi split 一个新窗口打开选中文件，并跳到该窗口gi split 一个新窗口打开选中文件，但不跳到该窗口s vsplit 一个新窗口打开选中文件，并跳到该窗口gs vsplit 一个新 窗口打开选中文件，但不跳到该窗口! 执行当前文件O 递归打开选中 结点下的所有目录x 合拢选中结点的父目录X 递归 合拢选中结点下的所有目录e Edit the current dif双击 相当于 NERDTree-o中键 对文件相当于 NERDTree-i，对目录相当于 NERDTree-eD 删除当前书签P 跳到根结点p 跳到父结点K 跳到当前目录下同级的第一个结点J 跳到当前目录下同级的最后一个结点k 跳到当前目录下同级的前一个结点j 跳到当前目录下同级的后一个结点C 将选中目录或选中文件的父目录设为根结点u 将当前根结点的父目录设为根目录，并变成合拢原根结点U 将当前根结点的父目录设为根目录，但保持展开原根结点r 递归刷新选中目录R 递归刷新根结点m 显示文件系统菜单 #！！！然后根据提示进行文件的操作如新建，重命名等cd 将 CWD 设为选中目录I 切换是否显示隐藏文件f 切换是否使用文件过滤器F 切换是否显示文件B 切换是否显示书签q 关闭 NerdTree 窗口? 切换是否显示 Quick Help:tabnew [++opt选项] ［＋cmd］ 文件 建立对指定文件新的tab:tabc 关闭当前的 tab:tabo 关闭所有其他的 tab:tabs 查看所有打开的 tab:tabp 前一个 tab:tabn 后一个 tab标准模式下：gT 前一个 tabgt 后一个 tabMacVim 还可以借助快捷键来完成 tab 的关闭、切换cmd+w 关闭当前的 tabcmd+&#123; 前一个 tabcmd+&#125; 后一个 tab]]></content>
       <categories>
         <category>工具</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>nerdtree</tag>
       </tags>
   </entry>
   <entry>
@@ -135,17 +146,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[nerdtree 快捷键]]></title>
-    <url>%2F2018%2F03%2F12%2Fnerdtree-%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
-    <content type="text"><![CDATA[nerdtree 快捷键nerdtree 可以让你浏览文件系统并打开文件或目录。你可以通过键盘或鼠标控制它以树状图显示文件系统，也可以在其中进行一些简单的文件系统操作。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162ctrl + w + h 光标 focus 左侧树形目录ctrl + w + l 光标 focus 右侧文件显示窗口ctrl + w + w 光标自动在左右侧窗口切换 #！！！ctrl + w + r 移动当前窗口的布局位置o 在已有窗口中打开文件、目录或书签，并跳到该窗口go 在已有窗口 中打开文件、目录或书签，但不跳到该窗口t 在新 Tab 中打开选中文件/书签，并跳到新 TabT 在新 Tab 中打开选中文件/书签，但不跳到新 Tabi split 一个新窗口打开选中文件，并跳到该窗口gi split 一个新窗口打开选中文件，但不跳到该窗口s vsplit 一个新窗口打开选中文件，并跳到该窗口gs vsplit 一个新 窗口打开选中文件，但不跳到该窗口! 执行当前文件O 递归打开选中 结点下的所有目录x 合拢选中结点的父目录X 递归 合拢选中结点下的所有目录e Edit the current dif双击 相当于 NERDTree-o中键 对文件相当于 NERDTree-i，对目录相当于 NERDTree-eD 删除当前书签P 跳到根结点p 跳到父结点K 跳到当前目录下同级的第一个结点J 跳到当前目录下同级的最后一个结点k 跳到当前目录下同级的前一个结点j 跳到当前目录下同级的后一个结点C 将选中目录或选中文件的父目录设为根结点u 将当前根结点的父目录设为根目录，并变成合拢原根结点U 将当前根结点的父目录设为根目录，但保持展开原根结点r 递归刷新选中目录R 递归刷新根结点m 显示文件系统菜单 #！！！然后根据提示进行文件的操作如新建，重命名等cd 将 CWD 设为选中目录I 切换是否显示隐藏文件f 切换是否使用文件过滤器F 切换是否显示文件B 切换是否显示书签q 关闭 NerdTree 窗口? 切换是否显示 Quick Help:tabnew [++opt选项] ［＋cmd］ 文件 建立对指定文件新的tab:tabc 关闭当前的 tab:tabo 关闭所有其他的 tab:tabs 查看所有打开的 tab:tabp 前一个 tab:tabn 后一个 tab标准模式下：gT 前一个 tabgt 后一个 tabMacVim 还可以借助快捷键来完成 tab 的关闭、切换cmd+w 关闭当前的 tabcmd+&#123; 前一个 tabcmd+&#125; 后一个 tab]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>nerdtree</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[SSH 免密登录远程服务器]]></title>
     <url>%2F2018%2F03%2F12%2Fssh-%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[在本地机器创建公钥打开万能的终端，执行如下命令，无视一切输出，一路欢快地回车即可。 1ssh-keygen -t rsa -C 'your email@domain.com' -t 指定密钥类型，默认即 rsa ，可以省略-C 设置注释文字，比如你的邮箱 2. 将公钥复制到ssh服务器将前一步骤生成的公钥~/id_rsa.pub文件，复制到ssh服务器对应用户下的~/.ssh/authorized_keys文件,可以有多种方式，这里只介绍常用的三种。 [适用于osx系统]使用ssh-copy-id-for-OSX工具将公钥复制至ssh服务器 12brew install ssh-copy-idssh-copy-id username@hostname #将username和hostname替换为你的ssh服务器用户名和IP 当ssh服务器username用户目录下尚未有.ssh目录时使用此方式 1cat ~/.ssh/id_rsa.pub | ssh username@hostname "mkdir ~/.ssh; cat &gt;&gt; ~/.ssh/authorized_keys" 通用方式 1234scp ~/.ssh/id_rsa.pub username@hostname:~/ #将公钥文件复制至ssh服务器ssh username@hostname #使用用户名和密码方式登录至ssh服务器mkdir .ssh #若.ssh目录已存在，可省略此步cat id_rsa.pub &gt;&gt; .ssh/authorized_keys #将公钥文件id_rsa.pub文件内容追加到authorized_keys文件 3. 快捷登录完成以上步骤后，即可使用以下命令直接登录ssh服务器，妈妈再也不用担心你记不住密码了 1ssh username@hostname #将username替换为你的ssh服务器用户名，hostname替换为服务器的ip 但是，每次仍然需要输入ssh username@hostname，仍算不上最优的解决方案，要是能实现一键登录或一条命令登录最好不过了，下面来看看都有那些解决方法 ssh本身也提供了一种快捷的方式来解决这个问题，往~/.ssh/config配置文件添加你的ssh服务器信息即可 1vim ~/.ssh/config #若没有该文件，直接新建即可 添加文件内容格式如下： 12345Host alias #自定义别名 HostName hostname #替换为你的ssh服务器ip或domain Port port #ssh服务器端口，默认为22 User user #ssh服务器用户名 IdentityFile ~/.ssh/id_rsa #第一个步骤生成的公钥文件对应的私钥文件 保存文件退出后，即可使用别名登录ssh服务器 1ssh alias #alias是你在~/.ssh/config文件配置的别名 若有多个ssh账号需要配置，只要在~/.ssh/config空行再写即可，如下: 12345678910Host foo HostName 192.168.2.222 Port 22 User test IdentityFile ~/.ssh/id_rsaHost alias HostName hostname Port port User user 如果你本地终端使用的是zsh，那就太简单不过了，直接给zsh添加一条别名 123echo "alias ssh-to-username='ssh username@hostname'" &gt;&gt; ~/.zshrc #将username和hostname替换为你的服务器信息source ~/.zshrc #重新加载更改后的zshrc文件ssh-to-username #使用别名，一条命令即可登录你的ssh服务器 如果你本地终端使用的是iterm2还可以添加Profile实现一键登录，具体步骤此处略过参考链接]]></content>
@@ -157,17 +157,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[使用OpenSSL生成pfx/cer/crt证书]]></title>
-    <url>%2F2018%2F03%2F12%2F%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90pfx-cer-crt%E8%AF%81%E4%B9%A6%2F</url>
-    <content type="text"><![CDATA[说明近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。 一、准备工作1.首先要下载OpenSSL，解压到你喜欢的地方 2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面 此时就可以输入OpenSSL命令了 二、生成key输入genrsa -out openssl.key 1024生成openssl.key文件。 openssl.key为key的名字随意起，1024为密钥长度 三、生成cer证书接着输入req -new -x509 -key openssl.key -out openssl.cer -days 3650 -subj /CN=zhangwei.website openssl.key为之前生成的key的名字，openssl.cer为生成的证书名字，3650为证书过期天数，CN的参数zhangwei.website是的你主机名或者IP地址(这里一定要写对，不然以后访问的话，浏览器会提示有风险)。 这样就生成了证书文件openssl.cer 四、生成IIS需要的PFX私钥文件输入pkcs12 -export -out openssl.pfx -inkey openssl.key -in openssl.cer 会让你输入密码，使用私钥时候使用的（千万不能忘记）。这样就生成了私钥文件openssl.pfx。 五、生成了crt证书由于手机需要crt证书，所以需要的话还要生成crt输入req -new -x509 -key openssl.key -out openssl.crt -days 3650 六、将pfx证书导入IIS打开IIS管理器点击网站，右侧会有一堆图标，找到服务器证书，点进去会发现有一个默认的证书叫localhost，不管它，右键导入证书，然后选择openssl.pfx这个文件就可以了，选不到的话，就把文件类型改为* 点击导入… 选择openssl.pfx文件输入生成时输入的密码 七、将证书绑定到你的网站点击你的网站，在最右侧点击绑定，会弹出一个IP列表的窗口，点击添加，选择https，然后下面证书选择刚刚导入的证书 这样Https站点就建立完成了，安装了openssl.cer证书的客户端就可以安全访问了。手机端用的是crt]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>OpenSSL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[vim 使用记录]]></title>
     <url>%2F2018%2F03%2F12%2Fvim-%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[vim 使用记录插件安装 获取Vundel 1git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim 将Vundel拷贝到目录~/.vim/bundle/下 编辑.vimrc文件，若没有则新建 1vim ~/.vimrc 在文件开始处添加如下内容 123456789101112131415161718192021set nocompatible &quot; requiredfiletype off &quot; required&quot; set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()&quot; alternatively, pass a path where Vundle should install plugins&quot;call vundle#begin(&apos;~/some/path/here&apos;)&quot; let Vundle manage Vundle, requiredPlugin &apos;gmarik/Vundle.vim&apos;&quot; add all your plugins here (note older versions of Vundle&quot; used Bundle instead of Plugin)&quot; ...&quot; All of your Plugins must be added before the following linecall vundle#end() &quot; requiredfiletype plugin indent on &quot; required 保存后重新进入.vimrc执行：PluginInstall 分割窗口 在本窗口下方打开文件：:sp &lt;filename&gt; 在本窗口右方打开文件：:vs &lt;filename&gt; 指定不同的区域，需要将下列内容添加到.vimrc 12set splitbelowset splitright 在不同窗口切换光标，替换默认快捷键，添加.vimrc 12345&quot;split navigationsnnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt; Buffers缓冲区可以帮助我们快速打开历史文件 :ls 列出历史文件记录 打开历史文件:b &lt;buffer name or number&gt; 折叠类添加.vimrc以下内容 123&quot; Enable foldingset foldmethod=indentset foldlevel=99 修改折叠快捷键，添加.vimrc以下内容 12&quot; Enable folding with the spacebarnnoremap &lt;space&gt; za 折叠显示注释 添加.vimrc以下内容 1let g:SimpylFold_docstring_preview=1 解决缩进问题安装插件，首先添加.vimrc 1Plugin &apos;tmhedberg/SimpylFold&apos; 然后运行安装命令：:PluginInstall PEP8标准.vimrc添加一下内容 12345678au BufNewFile,BufRead *.py \ set tabstop=4 \ set softtabstop=4 \ set shiftwidth=4 \ set textwidth=79 \ set expandtab \ set autoindent \ set fileformat=unix 其它文件类型 1234au BufNewFile,BufRead *.js, *.html, *.css \ set tabstop=2 \ set softtabstop=2 \ set shiftwidth=2 1Plugin &apos;nvie/vim-flake8&apos; 空格相关自动空格 1Plugin &apos;vim-scripts/indentpython.vim&apos; 显示多余空格 1au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/ UTF-8 支持1set encoding=utf-8 智能提示1Bundle &apos;Valloric/YouCompleteMe&apos; 这里可能需要安装依赖库 智能提示自定义修改 12let g:ycm_autoclose_preview_window_after_completion=1map &lt;leader&gt;g :YcmCompleter GoToDefinitionElseDeclaration&lt;CR&gt; ### 虚拟环境支持 123456789&quot;python with virtualenv supportpy &lt;&lt; EOFimport osimport sysif &apos;VIRTUAL_ENV&apos; in os.environ: project_base_dir = os.environ[&apos;VIRTUAL_ENV&apos;] activate_this = os.path.join(project_base_dir, &apos;bin/activate_this.py&apos;) execfile(activate_this, dict(__file__=activate_this))EOF 代码高亮1Plugin &apos;vim-syntastic/syntastic&apos; 格式化代码12let python_highlight_all=1syntax on 颜色引擎12Plugin &apos;jnurmine/Zenburn&apos;Plugin &apos;altercation/vim-colors-solarized&apos; 不知道干什么的12345678if has(&apos;gui_running&apos;) set background=dark colorscheme solarizedelse colorscheme zenburnendifcall togglebg#map(&quot;&lt;F5&gt;&quot;) 文件浏览1Plugin &apos;scrooloose/nerdtree&apos; 使用tab键 1Plugin &apos;jistr/vim-nerdtree-tabs&apos; 快速搜索1Plugin &apos;kien/ctrlp.vim&apos; git 支持1Plugin &apos;tpope/vim-fugitive&apos; 上方的显示条1Plugin &apos;Lokaltog/powerline&apos;, &#123;&apos;rtp&apos;: &apos;powerline/bindings/vim/&apos;&#125; 系统剪切板1set clipboard=unnamed 支持shell编辑.inputrc添加如下内容 1set editing-mode vi]]></content>
@@ -176,6 +165,17 @@
       </categories>
       <tags>
         <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用OpenSSL生成pfx/cer/crt证书]]></title>
+    <url>%2F2018%2F03%2F12%2F%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90pfx-cer-crt%E8%AF%81%E4%B9%A6%2F</url>
+    <content type="text"><![CDATA[说明近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。 一、准备工作1.首先要下载OpenSSL，解压到你喜欢的地方 2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面 此时就可以输入OpenSSL命令了 二、生成key输入genrsa -out openssl.key 1024生成openssl.key文件。 openssl.key为key的名字随意起，1024为密钥长度 三、生成cer证书接着输入req -new -x509 -key openssl.key -out openssl.cer -days 3650 -subj /CN=zhangwei.website openssl.key为之前生成的key的名字，openssl.cer为生成的证书名字，3650为证书过期天数，CN的参数zhangwei.website是的你主机名或者IP地址(这里一定要写对，不然以后访问的话，浏览器会提示有风险)。 这样就生成了证书文件openssl.cer 四、生成IIS需要的PFX私钥文件输入pkcs12 -export -out openssl.pfx -inkey openssl.key -in openssl.cer 会让你输入密码，使用私钥时候使用的（千万不能忘记）。这样就生成了私钥文件openssl.pfx。 五、生成了crt证书由于手机需要crt证书，所以需要的话还要生成crt输入req -new -x509 -key openssl.key -out openssl.crt -days 3650 六、将pfx证书导入IIS打开IIS管理器点击网站，右侧会有一堆图标，找到服务器证书，点进去会发现有一个默认的证书叫localhost，不管它，右键导入证书，然后选择openssl.pfx这个文件就可以了，选不到的话，就把文件类型改为* 点击导入… 选择openssl.pfx文件输入生成时输入的密码 七、将证书绑定到你的网站点击你的网站，在最右侧点击绑定，会弹出一个IP列表的窗口，点击添加，选择https，然后下面证书选择刚刚导入的证书 这样Https站点就建立完成了，安装了openssl.cer证书的客户端就可以安全访问了。手机端用的是crt]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>OpenSSL</tag>
       </tags>
   </entry>
 </search>
