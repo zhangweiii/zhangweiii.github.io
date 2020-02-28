@@ -80,17 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Git 常用操作]]></title>
-    <url>%2F2018%2F03%2F12%2FGit-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[Git 常用操作Git 是一个强大的分布式版本控制系统，但是命令相对复杂，这里记录常用命令 12345678910111213141516171819202122232425262728293031323334353637383940414243mkdir git-tutorial //新建文件夹git status //查看仓库的状态touch README.md //新建文件README.mdgit add README.md //将文件README.md添加到暂存区git log //显示git历史记录，注意所有log查看的内容都用Q键退出git log --pretty=short //显示git历史简要记录git log -p //显示git历史具体差别git log -p README.md //显示README.md文件的具体差别git diff README.md //比较README.md最近一次差别git diff HEAD //查看本次未提交和上次之间的差别，可以每次提交前执行次命令git branch //查看所有分支git checkout -b feature-A //建立一个名为feature-A的分支并切换到这个分支git branch feature-A //新建一个名为feature-A的分支git checkout feature-A //切换到feature-A分支git checkout - //切换到上一个分支git log --graph //以图表形式查看更改git merge --no-ff fix-B //当前分支合并fix-B，可能会存在冲突，解决就好了git reset --hard b8de79 //把git状态切换到b8de79的状态，b8de79是哈希值，可以从log里面获取git commit --amend //修改提交信息git commit -am 'commit message' //相当于add 和 commitgit rebase -i HEAD~2 //将最近2个提交合并，之后会出现一个文本，将pick修改为fixupgit submodule update --init --recursive //初始化并拉取子仓库]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[安装 oh my zsh]]></title>
     <url>%2F2018%2F03%2F12%2FMac%20%E5%AE%89%E8%A3%85%20oh-my-zsh%2F</url>
     <content type="text"><![CDATA[1. 安装 zsh + oh-my zsh1sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 或者： 1sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 2. 安装 Tomorrow OS X Terminal Color Schemas https://github.com/chriskempson/tomorrow-theme 直接访问上面的链接地址下载即可，对于 OS X Terminal 的，直接下载之后，双击安装即可，如果觉得麻烦，也可以直接下载我打包好的： Tomorrow OS X Terminal Color Schemas.zip 3. 安装 Pure1npm install --global pure-prompt 安装完成之后，进入到 oh-my-zsh 的 custom 目录下，我的就是默认的，然后： 1ln -s /path/to/pure.zsh 之后修改 oh-my-zsh 的主题为 pure 1vi ~/.zshrc 修改： 1ZSH_THEME="pure"` 4. 安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc 1plugins = (...plugins zsh-syntax-highlighting)]]></content>
@@ -99,6 +88,17 @@
       </categories>
       <tags>
         <tag>oh my zsh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git 常用操作]]></title>
+    <url>%2F2018%2F03%2F12%2FGit-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[Git 常用操作Git 是一个强大的分布式版本控制系统，但是命令相对复杂，这里记录常用命令 12345678910111213141516171819202122232425262728293031323334353637383940414243mkdir git-tutorial //新建文件夹git status //查看仓库的状态touch README.md //新建文件README.mdgit add README.md //将文件README.md添加到暂存区git log //显示git历史记录，注意所有log查看的内容都用Q键退出git log --pretty=short //显示git历史简要记录git log -p //显示git历史具体差别git log -p README.md //显示README.md文件的具体差别git diff README.md //比较README.md最近一次差别git diff HEAD //查看本次未提交和上次之间的差别，可以每次提交前执行次命令git branch //查看所有分支git checkout -b feature-A //建立一个名为feature-A的分支并切换到这个分支git branch feature-A //新建一个名为feature-A的分支git checkout feature-A //切换到feature-A分支git checkout - //切换到上一个分支git log --graph //以图表形式查看更改git merge --no-ff fix-B //当前分支合并fix-B，可能会存在冲突，解决就好了git reset --hard b8de79 //把git状态切换到b8de79的状态，b8de79是哈希值，可以从log里面获取git commit --amend //修改提交信息git commit -am 'commit message' //相当于add 和 commitgit rebase -i HEAD~2 //将最近2个提交合并，之后会出现一个文本，将pick修改为fixupgit submodule update --init --recursive //初始化并拉取子仓库]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
