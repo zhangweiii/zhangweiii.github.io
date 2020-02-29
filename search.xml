@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Mac 配置Golang开发环境]]></title>
     <url>%2F2020%2F01%2F15%2FMac-%E9%85%8D%E7%BD%AEGolang%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%2F</url>
-    <content type="text"><![CDATA[安装 brew官网：https://brew.sh/ 直接安装命令： 1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 安装 iTerm2官网：https://www.iterm2.com/ 使用官网下载安装 使用brew命令安装 1brew cask install iterm2 安装 zsh 和 oh-my-zshzsh官网：http://www.zsh.org/ 使用brew安装： 1brew install zsh oh-my-zsh官网：https://ohmyz.sh/ 使用shell命令安装： curl 安装 1sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" wget 安装 1sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 如果提示命令没有找到可以使用brew安装对应软件包 1brew install curl 或者 brew install wget 安装 oh-my-zsh 的插件安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc1plugins = (...plugins zsh-syntax-highlighting) 安装 zsh-autosuggestions1git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions 修改 ~/.zshrc1plugins = (...plugins zsh-autosuggestions) 安装 powerlevel9k 主题官网：https://github.com/Powerlevel9k/powerlevel9k 使用brew安装： 12brew tap sambadevi/powerlevel9kbrew install powerlevel9k 安装完成后，需要修改oh-my-zsh的默认主题，修改~/.zshrc文件，指定主题为powerlevel9k 修改 ZSH_THEME”robbyrussell” 为 ZSH_THEME”powerlevel9k/powerlevel9k” 安装 dejavu sans mono for powerline 和 Hack Nerd Font 字体使用brew安装： 12brew tap homebrew/cask-fontsbrew cask install font-hack-nerd-font 安装完成后，需要在iTerm2 -&gt; 偏好设置 -&gt; Profiles -&gt; Text -&gt; 勾选Use a different font for non-ASCII text -&gt; 选择 Hack Nerd Font 选择这个字体主要是解决之后spacevim图标显示问号的问题 使用 spacevim 配置 vim/nvimnvim官网：https://neovim.io/ 使用shell安装nvim： 1brew install neovim spacevim官网：https://spacevim.org 使用shell安装spacevim： 1curl -sLf https://spacevim.org/install.sh | bash 安装后，需要安装golang layer，修改 ~/.SpaceVim.d/init.toml，如果没有先打开nvim，命令行输入nvim即可，添加一下内容： 12[[layers]]name = "lang#go" 重新启动nvim，插件会自动安装下载 配置 powerlevel9k将一下内容添加到 ~/.zshrc： 1234POWERLEVEL9K_MODE="nerdfont-complete"POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()POWERLEVEL9K_PROMPT_ADD_NEWLINE=true 执行 source ~/.zshrc 使修改生效 安装vim go的必要的二进制文件进入nvim nvim 键入 :GoInstallBinaries 然后回车，nvim会自动下载编译二进制文件 如果安装失败，提示超时，可以自己复制包地址，在设置代理后，在命令行自行下载 设置Golang代理 123export GOPROXY="https://mirrors.aliyun.com/goproxy/"export GO111MODULE="on" 执行 source ~/.zshrc 使修改生效]]></content>
+    <content type="text"><![CDATA[安装 brew官网：https://brew.sh/ 直接安装命令： 1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 安装 iTerm2官网：https://www.iterm2.com/ 使用官网下载安装 使用brew命令安装 1brew cask install iterm2 安装 zsh 和 oh-my-zshzsh官网：http://www.zsh.org/ 使用brew安装： 1brew install zsh oh-my-zsh官网：https://ohmyz.sh/ 使用shell命令安装： curl 安装 1sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" wget 安装 1sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 如果提示命令没有找到可以使用brew安装对应软件包 1brew install curl 或者 brew install wget 安装 oh-my-zsh 的插件安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc1plugins = (...plugins zsh-syntax-highlighting) 安装 zsh-autosuggestions1git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions 修改 ~/.zshrc1plugins = (...plugins zsh-autosuggestions) 安装 powerlevel9k 主题官网：https://github.com/Powerlevel9k/powerlevel9k 使用brew安装： 12brew tap sambadevi/powerlevel9kbrew install powerlevel9k 安装完成后，需要修改oh-my-zsh的默认主题，修改~/.zshrc文件，指定主题为powerlevel9k 修改 ZSH_THEME”robbyrussell” 为 ZSH_THEME”powerlevel9k/powerlevel9k” 安装 dejavu sans mono for powerline 和 Hack Nerd Font 字体使用brew安装： 12brew tap homebrew/cask-fontsbrew cask install font-hack-nerd-font 安装完成后，需要在iTerm2 -&gt; 偏好设置 -&gt; Profiles -&gt; Text -&gt; 勾选Use a different font for non-ASCII text -&gt; 选择 Hack Nerd Font 选择这个字体主要是解决之后spacevim图标显示问号的问题 安装 golang下载地址：https://studygolang.com/dl安装方式：http://docscn.studygolang.com/doc/install 总结起来就是四步: wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz sudo tar -C /usr/local -xzf go1.14.linux-amd64.tar.gz ~/.zshrc中添加export PATH=$PATH:/usr/local/go/bin source ~/.zshrc 其中go1.14.linux-amd64.tar.gz是下载的文件名，这里是linux版本1.14 使用 spacevim 配置 vim/nvimnvim官网：https://neovim.io/ 使用shell安装nvim： 1brew install neovim spacevim官网：https://spacevim.org 使用shell安装spacevim： 1curl -sLf https://spacevim.org/install.sh | bash 安装后，需要安装golang layer，修改 ~/.SpaceVim.d/init.toml，如果没有先打开nvim，命令行输入nvim即可，添加一下内容： 12[[layers]]name = "lang#go" 重新启动nvim，插件会自动安装下载 配置 powerlevel9k将一下内容添加到 ~/.zshrc： 1234POWERLEVEL9K_MODE="nerdfont-complete"POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()POWERLEVEL9K_PROMPT_ADD_NEWLINE=true 执行 source ~/.zshrc 使修改生效 安装vim go的必要的二进制文件进入nvim nvim 键入 :GoInstallBinaries 然后回车，nvim会自动下载编译二进制文件 如果安装失败，提示超时，可以自己复制包地址，在设置代理后，在命令行自行下载 设置Golang代理 123export GOPROXY="https://mirrors.aliyun.com/goproxy/"export GO111MODULE="on" 执行 source ~/.zshrc 使修改生效]]></content>
       <categories>
         <category>Golang</category>
       </categories>
@@ -80,28 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python 常用]]></title>
-    <url>%2F2018%2F03%2F12%2FPython-%E5%B8%B8%E7%94%A8%E5%B0%8F%E4%B8%9C%E8%A5%BF%2F</url>
-    <content type="text"><![CDATA[Python 常用 本地开启FTP服务 python3 -m http.server 4321]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[安装 oh my zsh]]></title>
-    <url>%2F2018%2F03%2F12%2FMac%20%E5%AE%89%E8%A3%85%20oh-my-zsh%2F</url>
-    <content type="text"><![CDATA[1. 安装 zsh + oh-my zsh1sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 或者： 1sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 2. 安装 Tomorrow OS X Terminal Color Schemas https://github.com/chriskempson/tomorrow-theme 直接访问上面的链接地址下载即可，对于 OS X Terminal 的，直接下载之后，双击安装即可，如果觉得麻烦，也可以直接下载我打包好的： Tomorrow OS X Terminal Color Schemas.zip 3. 安装 Pure1npm install --global pure-prompt 安装完成之后，进入到 oh-my-zsh 的 custom 目录下，我的就是默认的，然后： 1ln -s /path/to/pure.zsh 之后修改 oh-my-zsh 的主题为 pure 1vi ~/.zshrc 修改： 1ZSH_THEME="pure"` 4. 安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc 1plugins = (...plugins zsh-syntax-highlighting)]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>oh my zsh</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Git 常用操作]]></title>
     <url>%2F2018%2F03%2F12%2FGit-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[Git 常用操作Git 是一个强大的分布式版本控制系统，但是命令相对复杂，这里记录常用命令 12345678910111213141516171819202122232425262728293031323334353637383940414243mkdir git-tutorial //新建文件夹git status //查看仓库的状态touch README.md //新建文件README.mdgit add README.md //将文件README.md添加到暂存区git log //显示git历史记录，注意所有log查看的内容都用Q键退出git log --pretty=short //显示git历史简要记录git log -p //显示git历史具体差别git log -p README.md //显示README.md文件的具体差别git diff README.md //比较README.md最近一次差别git diff HEAD //查看本次未提交和上次之间的差别，可以每次提交前执行次命令git branch //查看所有分支git checkout -b feature-A //建立一个名为feature-A的分支并切换到这个分支git branch feature-A //新建一个名为feature-A的分支git checkout feature-A //切换到feature-A分支git checkout - //切换到上一个分支git log --graph //以图表形式查看更改git merge --no-ff fix-B //当前分支合并fix-B，可能会存在冲突，解决就好了git reset --hard b8de79 //把git状态切换到b8de79的状态，b8de79是哈希值，可以从log里面获取git commit --amend //修改提交信息git commit -am 'commit message' //相当于add 和 commitgit rebase -i HEAD~2 //将最近2个提交合并，之后会出现一个文本，将pick修改为fixupgit submodule update --init --recursive //初始化并拉取子仓库]]></content>
@@ -121,6 +99,28 @@
       </categories>
       <tags>
         <tag>Pyenv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装 oh my zsh]]></title>
+    <url>%2F2018%2F03%2F12%2FMac%20%E5%AE%89%E8%A3%85%20oh-my-zsh%2F</url>
+    <content type="text"><![CDATA[1. 安装 zsh + oh-my zsh1sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 或者： 1sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 2. 安装 Tomorrow OS X Terminal Color Schemas https://github.com/chriskempson/tomorrow-theme 直接访问上面的链接地址下载即可，对于 OS X Terminal 的，直接下载之后，双击安装即可，如果觉得麻烦，也可以直接下载我打包好的： Tomorrow OS X Terminal Color Schemas.zip 3. 安装 Pure1npm install --global pure-prompt 安装完成之后，进入到 oh-my-zsh 的 custom 目录下，我的就是默认的，然后： 1ln -s /path/to/pure.zsh 之后修改 oh-my-zsh 的主题为 pure 1vi ~/.zshrc 修改： 1ZSH_THEME="pure"` 4. 安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc 1plugins = (...plugins zsh-syntax-highlighting)]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>oh my zsh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python 常用]]></title>
+    <url>%2F2018%2F03%2F12%2FPython-%E5%B8%B8%E7%94%A8%E5%B0%8F%E4%B8%9C%E8%A5%BF%2F</url>
+    <content type="text"><![CDATA[Python 常用 本地开启FTP服务 python3 -m http.server 4321]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -157,17 +157,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[vim 使用记录]]></title>
-    <url>%2F2018%2F03%2F12%2Fvim-%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[vim 使用记录插件安装 获取Vundel 1git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim 将Vundel拷贝到目录~/.vim/bundle/下 编辑.vimrc文件，若没有则新建 1vim ~/.vimrc 在文件开始处添加如下内容 123456789101112131415161718192021set nocompatible &quot; requiredfiletype off &quot; required&quot; set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()&quot; alternatively, pass a path where Vundle should install plugins&quot;call vundle#begin(&apos;~/some/path/here&apos;)&quot; let Vundle manage Vundle, requiredPlugin &apos;gmarik/Vundle.vim&apos;&quot; add all your plugins here (note older versions of Vundle&quot; used Bundle instead of Plugin)&quot; ...&quot; All of your Plugins must be added before the following linecall vundle#end() &quot; requiredfiletype plugin indent on &quot; required 保存后重新进入.vimrc执行：PluginInstall 分割窗口 在本窗口下方打开文件：:sp &lt;filename&gt; 在本窗口右方打开文件：:vs &lt;filename&gt; 指定不同的区域，需要将下列内容添加到.vimrc 12set splitbelowset splitright 在不同窗口切换光标，替换默认快捷键，添加.vimrc 12345&quot;split navigationsnnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt; Buffers缓冲区可以帮助我们快速打开历史文件 :ls 列出历史文件记录 打开历史文件:b &lt;buffer name or number&gt; 折叠类添加.vimrc以下内容 123&quot; Enable foldingset foldmethod=indentset foldlevel=99 修改折叠快捷键，添加.vimrc以下内容 12&quot; Enable folding with the spacebarnnoremap &lt;space&gt; za 折叠显示注释 添加.vimrc以下内容 1let g:SimpylFold_docstring_preview=1 解决缩进问题安装插件，首先添加.vimrc 1Plugin &apos;tmhedberg/SimpylFold&apos; 然后运行安装命令：:PluginInstall PEP8标准.vimrc添加一下内容 12345678au BufNewFile,BufRead *.py \ set tabstop=4 \ set softtabstop=4 \ set shiftwidth=4 \ set textwidth=79 \ set expandtab \ set autoindent \ set fileformat=unix 其它文件类型 1234au BufNewFile,BufRead *.js, *.html, *.css \ set tabstop=2 \ set softtabstop=2 \ set shiftwidth=2 1Plugin &apos;nvie/vim-flake8&apos; 空格相关自动空格 1Plugin &apos;vim-scripts/indentpython.vim&apos; 显示多余空格 1au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/ UTF-8 支持1set encoding=utf-8 智能提示1Bundle &apos;Valloric/YouCompleteMe&apos; 这里可能需要安装依赖库 智能提示自定义修改 12let g:ycm_autoclose_preview_window_after_completion=1map &lt;leader&gt;g :YcmCompleter GoToDefinitionElseDeclaration&lt;CR&gt; ### 虚拟环境支持 123456789&quot;python with virtualenv supportpy &lt;&lt; EOFimport osimport sysif &apos;VIRTUAL_ENV&apos; in os.environ: project_base_dir = os.environ[&apos;VIRTUAL_ENV&apos;] activate_this = os.path.join(project_base_dir, &apos;bin/activate_this.py&apos;) execfile(activate_this, dict(__file__=activate_this))EOF 代码高亮1Plugin &apos;vim-syntastic/syntastic&apos; 格式化代码12let python_highlight_all=1syntax on 颜色引擎12Plugin &apos;jnurmine/Zenburn&apos;Plugin &apos;altercation/vim-colors-solarized&apos; 不知道干什么的12345678if has(&apos;gui_running&apos;) set background=dark colorscheme solarizedelse colorscheme zenburnendifcall togglebg#map(&quot;&lt;F5&gt;&quot;) 文件浏览1Plugin &apos;scrooloose/nerdtree&apos; 使用tab键 1Plugin &apos;jistr/vim-nerdtree-tabs&apos; 快速搜索1Plugin &apos;kien/ctrlp.vim&apos; git 支持1Plugin &apos;tpope/vim-fugitive&apos; 上方的显示条1Plugin &apos;Lokaltog/powerline&apos;, &#123;&apos;rtp&apos;: &apos;powerline/bindings/vim/&apos;&#125; 系统剪切板1set clipboard=unnamed 支持shell编辑.inputrc添加如下内容 1set editing-mode vi]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[使用OpenSSL生成pfx/cer/crt证书]]></title>
     <url>%2F2018%2F03%2F12%2F%E4%BD%BF%E7%94%A8OpenSSL%E7%94%9F%E6%88%90pfx-cer-crt%E8%AF%81%E4%B9%A6%2F</url>
     <content type="text"><![CDATA[说明近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。 一、准备工作1.首先要下载OpenSSL，解压到你喜欢的地方 2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面 此时就可以输入OpenSSL命令了 二、生成key输入genrsa -out openssl.key 1024生成openssl.key文件。 openssl.key为key的名字随意起，1024为密钥长度 三、生成cer证书接着输入req -new -x509 -key openssl.key -out openssl.cer -days 3650 -subj /CN=zhangwei.website openssl.key为之前生成的key的名字，openssl.cer为生成的证书名字，3650为证书过期天数，CN的参数zhangwei.website是的你主机名或者IP地址(这里一定要写对，不然以后访问的话，浏览器会提示有风险)。 这样就生成了证书文件openssl.cer 四、生成IIS需要的PFX私钥文件输入pkcs12 -export -out openssl.pfx -inkey openssl.key -in openssl.cer 会让你输入密码，使用私钥时候使用的（千万不能忘记）。这样就生成了私钥文件openssl.pfx。 五、生成了crt证书由于手机需要crt证书，所以需要的话还要生成crt输入req -new -x509 -key openssl.key -out openssl.crt -days 3650 六、将pfx证书导入IIS打开IIS管理器点击网站，右侧会有一堆图标，找到服务器证书，点进去会发现有一个默认的证书叫localhost，不管它，右键导入证书，然后选择openssl.pfx这个文件就可以了，选不到的话，就把文件类型改为* 点击导入… 选择openssl.pfx文件输入生成时输入的密码 七、将证书绑定到你的网站点击你的网站，在最右侧点击绑定，会弹出一个IP列表的窗口，点击添加，选择https，然后下面证书选择刚刚导入的证书 这样Https站点就建立完成了，安装了openssl.cer证书的客户端就可以安全访问了。手机端用的是crt]]></content>
@@ -176,6 +165,17 @@
       </categories>
       <tags>
         <tag>OpenSSL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vim 使用记录]]></title>
+    <url>%2F2018%2F03%2F12%2Fvim-%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[vim 使用记录插件安装 获取Vundel 1git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim 将Vundel拷贝到目录~/.vim/bundle/下 编辑.vimrc文件，若没有则新建 1vim ~/.vimrc 在文件开始处添加如下内容 123456789101112131415161718192021set nocompatible &quot; requiredfiletype off &quot; required&quot; set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()&quot; alternatively, pass a path where Vundle should install plugins&quot;call vundle#begin(&apos;~/some/path/here&apos;)&quot; let Vundle manage Vundle, requiredPlugin &apos;gmarik/Vundle.vim&apos;&quot; add all your plugins here (note older versions of Vundle&quot; used Bundle instead of Plugin)&quot; ...&quot; All of your Plugins must be added before the following linecall vundle#end() &quot; requiredfiletype plugin indent on &quot; required 保存后重新进入.vimrc执行：PluginInstall 分割窗口 在本窗口下方打开文件：:sp &lt;filename&gt; 在本窗口右方打开文件：:vs &lt;filename&gt; 指定不同的区域，需要将下列内容添加到.vimrc 12set splitbelowset splitright 在不同窗口切换光标，替换默认快捷键，添加.vimrc 12345&quot;split navigationsnnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt; Buffers缓冲区可以帮助我们快速打开历史文件 :ls 列出历史文件记录 打开历史文件:b &lt;buffer name or number&gt; 折叠类添加.vimrc以下内容 123&quot; Enable foldingset foldmethod=indentset foldlevel=99 修改折叠快捷键，添加.vimrc以下内容 12&quot; Enable folding with the spacebarnnoremap &lt;space&gt; za 折叠显示注释 添加.vimrc以下内容 1let g:SimpylFold_docstring_preview=1 解决缩进问题安装插件，首先添加.vimrc 1Plugin &apos;tmhedberg/SimpylFold&apos; 然后运行安装命令：:PluginInstall PEP8标准.vimrc添加一下内容 12345678au BufNewFile,BufRead *.py \ set tabstop=4 \ set softtabstop=4 \ set shiftwidth=4 \ set textwidth=79 \ set expandtab \ set autoindent \ set fileformat=unix 其它文件类型 1234au BufNewFile,BufRead *.js, *.html, *.css \ set tabstop=2 \ set softtabstop=2 \ set shiftwidth=2 1Plugin &apos;nvie/vim-flake8&apos; 空格相关自动空格 1Plugin &apos;vim-scripts/indentpython.vim&apos; 显示多余空格 1au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/ UTF-8 支持1set encoding=utf-8 智能提示1Bundle &apos;Valloric/YouCompleteMe&apos; 这里可能需要安装依赖库 智能提示自定义修改 12let g:ycm_autoclose_preview_window_after_completion=1map &lt;leader&gt;g :YcmCompleter GoToDefinitionElseDeclaration&lt;CR&gt; ### 虚拟环境支持 123456789&quot;python with virtualenv supportpy &lt;&lt; EOFimport osimport sysif &apos;VIRTUAL_ENV&apos; in os.environ: project_base_dir = os.environ[&apos;VIRTUAL_ENV&apos;] activate_this = os.path.join(project_base_dir, &apos;bin/activate_this.py&apos;) execfile(activate_this, dict(__file__=activate_this))EOF 代码高亮1Plugin &apos;vim-syntastic/syntastic&apos; 格式化代码12let python_highlight_all=1syntax on 颜色引擎12Plugin &apos;jnurmine/Zenburn&apos;Plugin &apos;altercation/vim-colors-solarized&apos; 不知道干什么的12345678if has(&apos;gui_running&apos;) set background=dark colorscheme solarizedelse colorscheme zenburnendifcall togglebg#map(&quot;&lt;F5&gt;&quot;) 文件浏览1Plugin &apos;scrooloose/nerdtree&apos; 使用tab键 1Plugin &apos;jistr/vim-nerdtree-tabs&apos; 快速搜索1Plugin &apos;kien/ctrlp.vim&apos; git 支持1Plugin &apos;tpope/vim-fugitive&apos; 上方的显示条1Plugin &apos;Lokaltog/powerline&apos;, &#123;&apos;rtp&apos;: &apos;powerline/bindings/vim/&apos;&#125; 系统剪切板1set clipboard=unnamed 支持shell编辑.inputrc添加如下内容 1set editing-mode vi]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
       </tags>
   </entry>
 </search>
