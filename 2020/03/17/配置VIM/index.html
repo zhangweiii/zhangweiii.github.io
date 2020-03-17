@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="安装 brew官网：https://brew.sh/ 直接安装命令： 1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装 iTerm2官网：https://www.iterm2.com/  使用官网下载安装  使用brew命令安装   1brew">
-<meta name="keywords" content="Golang">
+  <meta name="description" content="配置 vim 作为 golang IDE安装vim的插件管理器官方主页:vim-plug 为vim安装执行： 12curl -fLo ~/.vim/autoload/plug.vim --create-dirs \    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 为nvim安装执行： 12curl -fL">
+<meta name="keywords" content="VIM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 配置Golang开发环境">
-<meta property="og:url" content="zhangwei.ink/2020/01/15/Mac-配置Golang开发环境/index.html">
+<meta property="og:title" content="配置 vim 作为 golang IDE">
+<meta property="og:url" content="zhangwei.ink/2020/03/17/配置VIM/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="安装 brew官网：https://brew.sh/ 直接安装命令： 1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装 iTerm2官网：https://www.iterm2.com/  使用官网下载安装  使用brew命令安装   1brew">
+<meta property="og:description" content="配置 vim 作为 golang IDE安装vim的插件管理器官方主页:vim-plug 为vim安装执行： 12curl -fLo ~/.vim/autoload/plug.vim --create-dirs \    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 为nvim安装执行： 12curl -fL">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-29T08:34:45.348Z">
+<meta property="og:updated_time" content="2020-03-17T00:12:03.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac 配置Golang开发环境">
-<meta name="twitter:description" content="安装 brew官网：https://brew.sh/ 直接安装命令： 1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; 安装 iTerm2官网：https://www.iterm2.com/  使用官网下载安装  使用brew命令安装   1brew">
+<meta name="twitter:title" content="配置 vim 作为 golang IDE">
+<meta name="twitter:description" content="配置 vim 作为 golang IDE安装vim的插件管理器官方主页:vim-plug 为vim安装执行： 12curl -fLo ~/.vim/autoload/plug.vim --create-dirs \    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 为nvim安装执行： 12curl -fL">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="zhangwei.ink/2020/01/15/Mac-配置Golang开发环境/"/>
+  <link rel="canonical" href="zhangwei.ink/2020/03/17/配置VIM/"/>
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>Mac 配置Golang开发环境 | 学习笔记</title>
+  <title>配置 vim 作为 golang IDE | 学习笔记</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="zhangwei.ink/2020/01/15/Mac-配置Golang开发环境/"/>
+    <link itemprop="mainEntityOfPage" href="zhangwei.ink/2020/03/17/配置VIM/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhangweiii"/>
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Mac 配置Golang开发环境
+          <h2 class="post-title" itemprop="name headline">配置 vim 作为 golang IDE
 
               
             
@@ -432,24 +432,12 @@
                 
               
 
-              <time title="创建时间：2020-01-15 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-15T00:00:00+08:00">2020-01-15</time>
+              <time title="创建时间：2020-03-17 00:00:00 / 修改时间：08:12:03" itemprop="dateCreated datePublished" datetime="2020-03-17T00:00:00+08:00">2020-03-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-29 16:34:45" itemprop="dateModified" datetime="2020-02-29T16:34:45+08:00">2020-02-29</time>
               
             
           </span>
@@ -466,7 +454,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
 
                 
                 
@@ -501,70 +489,19 @@
       
 
       
-        <h1 id="安装-brew"><a href="#安装-brew" class="headerlink" title="安装 brew"></a>安装 brew</h1><p>官网：<a href="https://brew.sh/" target="_blank" rel="noopener">https://brew.sh/</a></p>
-<p>直接安装命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure>
-<h1 id="安装-iTerm2"><a href="#安装-iTerm2" class="headerlink" title="安装 iTerm2"></a>安装 iTerm2</h1><p>官网：<a href="https://www.iterm2.com/" target="_blank" rel="noopener">https://www.iterm2.com/</a></p>
-<ol>
-<li><p>使用官网下载安装</p>
-</li>
-<li><p>使用brew命令安装</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install iterm2</span><br></pre></td></tr></table></figure>
-<h1 id="安装-zsh-和-oh-my-zsh"><a href="#安装-zsh-和-oh-my-zsh" class="headerlink" title="安装 zsh 和 oh-my-zsh"></a>安装 zsh 和 oh-my-zsh</h1><p>zsh官网：<a href="http://www.zsh.org/" target="_blank" rel="noopener">http://www.zsh.org/</a></p>
-<p>使用brew安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install zsh</span><br></pre></td></tr></table></figure>
-<p>oh-my-zsh官网：<a href="https://ohmyz.sh/" target="_blank" rel="noopener">https://ohmyz.sh/</a></p>
-<p>使用shell命令安装：</p>
-<p>curl 安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"</span><br></pre></td></tr></table></figure>
-<p>wget 安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"</span><br></pre></td></tr></table></figure>
-<p>如果提示命令没有找到可以使用brew安装对应软件包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install curl 或者 brew install wget</span><br></pre></td></tr></table></figure>
-<h1 id="安装-oh-my-zsh-的插件"><a href="#安装-oh-my-zsh-的插件" class="headerlink" title="安装 oh-my-zsh 的插件"></a>安装 oh-my-zsh 的插件</h1><h2 id="安装-zsh-syntax-highlighting"><a href="#安装-zsh-syntax-highlighting" class="headerlink" title="安装 zsh-syntax-highlighting"></a>安装 zsh-syntax-highlighting</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
-<p>修改 <code>~/.zshrc</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins = (...plugins zsh-syntax-highlighting)</span><br></pre></td></tr></table></figure></p>
-<h2 id="安装-zsh-autosuggestions"><a href="#安装-zsh-autosuggestions" class="headerlink" title="安装 zsh-autosuggestions"></a>安装 zsh-autosuggestions</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
-<p>修改 <code>~/.zshrc</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins = (...plugins zsh-autosuggestions)</span><br></pre></td></tr></table></figure></p>
-<h1 id="安装-powerlevel9k-主题"><a href="#安装-powerlevel9k-主题" class="headerlink" title="安装 powerlevel9k 主题"></a>安装 powerlevel9k 主题</h1><p>官网：<a href="https://github.com/Powerlevel9k/powerlevel9k" target="_blank" rel="noopener">https://github.com/Powerlevel9k/powerlevel9k</a></p>
-<p>使用brew安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap sambadevi/powerlevel9k</span><br><span class="line">brew install powerlevel9k</span><br></pre></td></tr></table></figure>
-<p>安装完成后，需要修改<code>oh-my-zsh</code>的默认主题，修改<code>~/.zshrc</code>文件，指定主题为<code>powerlevel9k</code></p>
-<p>修改 <code>ZSH_THEME”robbyrussell”</code> 为 <code>ZSH_THEME”powerlevel9k/powerlevel9k”</code></p>
-<h1 id="安装-dejavu-sans-mono-for-powerline-和-Hack-Nerd-Font-字体"><a href="#安装-dejavu-sans-mono-for-powerline-和-Hack-Nerd-Font-字体" class="headerlink" title="安装 dejavu sans mono for powerline 和 Hack Nerd Font 字体"></a>安装 dejavu sans mono for powerline 和 Hack Nerd Font 字体</h1><p>使用brew安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap homebrew/cask-fonts</span><br><span class="line">brew cask install font-hack-nerd-font</span><br></pre></td></tr></table></figure>
-<p>安装完成后，需要在<code>iTerm2</code> -&gt; <code>偏好设置</code> -&gt; <code>Profiles</code> -&gt; <code>Text</code> -&gt; 勾选<code>Use a different font for non-ASCII text</code> -&gt; 选择 <code>Hack Nerd Font</code></p>
-<p>选择这个字体主要是解决之后<code>spacevim</code>图标显示问号的问题</p>
-<h1 id="安装-golang"><a href="#安装-golang" class="headerlink" title="安装 golang"></a>安装 golang</h1><p>下载地址：<a href="https://studygolang.com/dl" target="_blank" rel="noopener">https://studygolang.com/dl</a><br>安装方式：<a href="http://docscn.studygolang.com/doc/install" target="_blank" rel="noopener">http://docscn.studygolang.com/doc/install</a></p>
-<p>总结起来就是四步:</p>
-<ol>
-<li><code>wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz</code></li>
-<li><code>sudo tar -C /usr/local -xzf go1.14.linux-amd64.tar.gz</code></li>
-<li><code>~/.zshrc</code>中添加<code>export PATH=$PATH:/usr/local/go/bin</code></li>
-<li><code>source ~/.zshrc</code></li>
-</ol>
+        <h1 id="配置-vim-作为-golang-IDE"><a href="#配置-vim-作为-golang-IDE" class="headerlink" title="配置 vim 作为 golang IDE"></a>配置 vim 作为 golang IDE</h1><h2 id="安装vim的插件管理器"><a href="#安装vim的插件管理器" class="headerlink" title="安装vim的插件管理器"></a>安装vim的插件管理器</h2><p>官方主页:<a href="https://github.com/junegunn/vim-plug" target="_blank" rel="noopener">vim-plug</a></p>
+<p>为vim安装执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fLo ~/.vim/autoload/plug.vim --create-dirs \</span><br><span class="line">    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span><br></pre></td></tr></table></figure>
+<p>为nvim安装执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \</span><br><span class="line">    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span><br></pre></td></tr></table></figure>
+<h2 id="nvim-共用-vim-的插件目录和配置文件"><a href="#nvim-共用-vim-的插件目录和配置文件" class="headerlink" title="nvim 共用 vim 的插件目录和配置文件"></a>nvim 共用 vim 的插件目录和配置文件</h2><p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.local/share/nvim/site      // 创建nvim插件目录</span><br><span class="line">ln -s ~/.vim ~/.local/share/nvim/site  // 链接vim插件目录到nvim插件目录</span><br><span class="line">ln -s .vimrc .config/nvim/init.vim     // 链接vim配置到nvim配置</span><br></pre></td></tr></table></figure>
+<h2 id="修改-vimrc文件"><a href="#修改-vimrc文件" class="headerlink" title="修改.vimrc文件"></a>修改.vimrc文件</h2><p>路径:<code>~/.vimrc</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br></pre></td><td class="code"><pre><span class="line">" Specify a directory for plugins</span><br><span class="line">call plug#begin('~/.vim/plugged')</span><br><span class="line"></span><br><span class="line">Plug 'neoclide/coc.nvim', &#123;'branch': 'release'&#125;</span><br><span class="line">Plug 'scrooloose/nerdtree'</span><br><span class="line">"Plug 'tsony-tsonev/nerdtree-git-plugin'</span><br><span class="line">Plug 'Xuyuanp/nerdtree-git-plugin'</span><br><span class="line">Plug 'tiagofumo/vim-nerdtree-syntax-highlight'</span><br><span class="line">Plug 'ryanoasis/vim-devicons'</span><br><span class="line">Plug 'airblade/vim-gitgutter'</span><br><span class="line">Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files</span><br><span class="line">Plug 'scrooloose/nerdcommenter'</span><br><span class="line">"Plug 'prettier/vim-prettier', &#123; 'do': 'yarn install' &#125;</span><br><span class="line"></span><br><span class="line">Plug 'christoomey/vim-tmux-navigator'</span><br><span class="line"></span><br><span class="line">Plug 'morhetz/gruvbox'</span><br><span class="line"></span><br><span class="line">Plug 'vim-airline/vim-airline'</span><br><span class="line">Plug 'vim-airline/vim-airline-themes'</span><br><span class="line">Plug 'mhinz/vim-startify'</span><br><span class="line"></span><br><span class="line">Plug 'fatih/vim-go', &#123; 'do': ':GoUpdateBinaries' &#125;</span><br><span class="line"></span><br><span class="line">Plug 'HerringtonDarkholme/yats.vim' " TS Syntax</span><br><span class="line"></span><br><span class="line">" Initialize plugin system</span><br><span class="line">call plug#end()</span><br><span class="line"></span><br><span class="line">inoremap jk &lt;ESC&gt;</span><br><span class="line">nmap &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;</span><br><span class="line">vmap ++ &lt;plug&gt;NERDCommenterToggle</span><br><span class="line">nmap ++ &lt;plug&gt;NERDCommenterToggle</span><br><span class="line"></span><br><span class="line">" open NERDTree automatically</span><br><span class="line">"autocmd StdinReadPre * let s:std_in=1</span><br><span class="line">"autocmd VimEnter * NERDTree</span><br><span class="line"></span><br><span class="line">let g:NERDTreeGitStatusWithFlags = 1</span><br><span class="line">"let g:WebDevIconsUnicodeDecorateFolderNodes = 1</span><br><span class="line">"let g:NERDTreeGitStatusNodeColorization = 1</span><br><span class="line">"let g:NERDTreeColorMapCustom = &#123;</span><br><span class="line">    "\ "Staged"    : "#0ee375",  </span><br><span class="line">    "\ "Modified"  : "#d9bf91",  </span><br><span class="line">    "\ "Renamed"   : "#51C9FC",  </span><br><span class="line">    "\ "Untracked" : "#FCE77C",  </span><br><span class="line">    "\ "Unmerged"  : "#FC51E6",  </span><br><span class="line">    "\ "Dirty"     : "#FFBD61",  </span><br><span class="line">    "\ "Clean"     : "#87939A",   </span><br><span class="line">    "\ "Ignored"   : "#808080"   </span><br><span class="line">    "\ &#125;                         </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let g:NERDTreeIgnore = ['^node_modules$']</span><br><span class="line"></span><br><span class="line">" vim-prettier</span><br><span class="line">"let g:prettier#quickfix_enabled = 0</span><br><span class="line">"let g:prettier#quickfix_auto_focus = 0</span><br><span class="line">" prettier command for coc</span><br><span class="line">command! -nargs=0 Prettier :CocCommand prettier.formatFile</span><br><span class="line">" run prettier on save</span><br><span class="line">"let g:prettier#autoformat = 0</span><br><span class="line">"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">" ctrlp</span><br><span class="line">let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']</span><br><span class="line"></span><br><span class="line">" j/k will move virtual lines (lines that wrap)</span><br><span class="line">noremap &lt;silent&gt; &lt;expr&gt; j (v:count == 0 ? 'gj' : 'j')</span><br><span class="line">noremap &lt;silent&gt; &lt;expr&gt; k (v:count == 0 ? 'gk' : 'k')</span><br><span class="line"></span><br><span class="line">set relativenumber</span><br><span class="line"></span><br><span class="line">set smarttab</span><br><span class="line">set cindent</span><br><span class="line">set tabstop=2</span><br><span class="line">set shiftwidth=2</span><br><span class="line">" always uses spaces instead of tab characters</span><br><span class="line">set expandtab</span><br><span class="line"></span><br><span class="line">colorscheme gruvbox</span><br><span class="line"></span><br><span class="line">" sync open file with NERDTree</span><br><span class="line">" " Check if NERDTree is open or active</span><br><span class="line">function! IsNERDTreeOpen()        </span><br><span class="line">  return exists("t:NERDTreeBufName") &amp;&amp; (bufwinnr(t:NERDTreeBufName) != -1)</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line">" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable</span><br><span class="line">" file, and we're not in vimdiff</span><br><span class="line">function! SyncTree()</span><br><span class="line">  if &amp;modifiable &amp;&amp; IsNERDTreeOpen() &amp;&amp; strlen(expand('%')) &gt; 0 &amp;&amp; !&amp;diff</span><br><span class="line">    NERDTreeFind</span><br><span class="line">    wincmd p</span><br><span class="line">  endif</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line">" Highlight currently open buffer in NERDTree</span><br><span class="line">autocmd BufEnter * call SyncTree()</span><br><span class="line"></span><br><span class="line">" coc config</span><br><span class="line">let g:coc_global_extensions = [</span><br><span class="line">  \ 'coc-snippets',</span><br><span class="line">  \ 'coc-pairs',</span><br><span class="line">  \ 'coc-tsserver',</span><br><span class="line">  \ 'coc-eslint', </span><br><span class="line">  \ 'coc-prettier', </span><br><span class="line">  \ 'coc-json', </span><br><span class="line">  \ ]</span><br><span class="line">" from readme</span><br><span class="line">" if hidden is not set, TextEdit might fail.</span><br><span class="line">set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.</span><br><span class="line">set updatetime=300</span><br><span class="line"></span><br><span class="line">" don't give |ins-completion-menu| messages.</span><br><span class="line">set shortmess+=c</span><br><span class="line"></span><br><span class="line">" always show signcolumns</span><br><span class="line">set signcolumn=yes</span><br><span class="line"></span><br><span class="line">" Use tab for trigger completion with characters ahead and navigate.</span><br><span class="line">" Use command ':verbose imap &lt;tab&gt;' to make sure tab is not mapped by other plugin.</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;TAB&gt;</span><br><span class="line">      \ pumvisible() ? "\&lt;C-n&gt;" :</span><br><span class="line">      \ &lt;SID&gt;check_back_space() ? "\&lt;TAB&gt;" :</span><br><span class="line">      \ coc#refresh()</span><br><span class="line">inoremap &lt;expr&gt;&lt;S-TAB&gt; pumvisible() ? "\&lt;C-p&gt;" : "\&lt;C-h&gt;"</span><br><span class="line"></span><br><span class="line">function! s:check_back_space() abort</span><br><span class="line">  let col = col('.') - 1</span><br><span class="line">  return !col || getline('.')[col - 1]  =~# '\s'</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line">" Use &lt;c-space&gt; to trigger completion.</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-space&gt; coc#refresh()</span><br><span class="line"></span><br><span class="line">" Use &lt;cr&gt; to confirm completion, `&lt;C-g&gt;u` means break undo chain at current position.</span><br><span class="line">" Coc only does snippet and additional edit on confirm.</span><br><span class="line">inoremap &lt;expr&gt; &lt;cr&gt; pumvisible() ? "\&lt;C-y&gt;" : "\&lt;C-g&gt;u\&lt;CR&gt;"</span><br><span class="line">" Or use `complete_info` if your vim support it, like:</span><br><span class="line">" inoremap &lt;expr&gt; &lt;cr&gt; complete_info()["selected"] != "-1" ? "\&lt;C-y&gt;" : "\&lt;C-g&gt;u\&lt;CR&gt;"</span><br><span class="line"></span><br><span class="line">" Use `[g` and `]g` to navigate diagnostics</span><br><span class="line">nmap &lt;silent&gt; [g &lt;Plug&gt;(coc-diagnostic-prev)</span><br><span class="line">nmap &lt;silent&gt; ]g &lt;Plug&gt;(coc-diagnostic-next)</span><br><span class="line"></span><br><span class="line">" Remap keys for gotos</span><br><span class="line">nmap &lt;silent&gt; gd &lt;Plug&gt;(coc-definition)</span><br><span class="line">nmap &lt;silent&gt; gy &lt;Plug&gt;(coc-type-definition)</span><br><span class="line">nmap &lt;silent&gt; gi &lt;Plug&gt;(coc-implementation)</span><br><span class="line">nmap &lt;silent&gt; gr &lt;Plug&gt;(coc-references)</span><br><span class="line"></span><br><span class="line">" Use K to show documentation in preview window</span><br><span class="line">nnoremap &lt;silent&gt; K :call &lt;SID&gt;show_documentation()&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">function! s:show_documentation()</span><br><span class="line">  if (index(['vim','help'], &amp;filetype) &gt;= 0)</span><br><span class="line">    execute 'h '.expand('&lt;cword&gt;')</span><br><span class="line">  else</span><br><span class="line">    call CocAction('doHover')</span><br><span class="line">  endif</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line">" Highlight symbol under cursor on CursorHold</span><br><span class="line">autocmd CursorHold * silent call CocActionAsync('highlight')</span><br><span class="line"></span><br><span class="line">" Remap for rename current word</span><br><span class="line">nmap &lt;F2&gt; &lt;Plug&gt;(coc-rename)</span><br><span class="line"></span><br><span class="line">" Remap for format selected region</span><br><span class="line">xmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)</span><br><span class="line">nmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)</span><br><span class="line"></span><br><span class="line">augroup mygroup</span><br><span class="line">  autocmd!</span><br><span class="line">  " Setup formatexpr specified filetype(s).</span><br><span class="line">  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')</span><br><span class="line">  " Update signature help on jump placeholder</span><br><span class="line">  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')</span><br><span class="line">augroup end</span><br><span class="line"></span><br><span class="line">" Remap for do codeAction of selected region, ex: `&lt;leader&gt;aap` for current paragraph</span><br><span class="line">xmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)</span><br><span class="line">nmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)</span><br><span class="line"></span><br><span class="line">" Remap for do codeAction of current line</span><br><span class="line">nmap &lt;leader&gt;ac  &lt;Plug&gt;(coc-codeaction)</span><br><span class="line">" Fix autofix problem of current line</span><br><span class="line">nmap &lt;leader&gt;qf  &lt;Plug&gt;(coc-fix-current)</span><br><span class="line"></span><br><span class="line">" Create mappings for function text object, requires document symbols feature of languageserver.</span><br><span class="line">xmap if &lt;Plug&gt;(coc-funcobj-i)</span><br><span class="line">xmap af &lt;Plug&gt;(coc-funcobj-a)</span><br><span class="line">omap if &lt;Plug&gt;(coc-funcobj-i)</span><br><span class="line">omap af &lt;Plug&gt;(coc-funcobj-a)</span><br><span class="line"></span><br><span class="line">" Use &lt;C-d&gt; for select selections ranges, needs server support, like: coc-tsserver, coc-python</span><br><span class="line">nmap &lt;silent&gt; &lt;C-d&gt; &lt;Plug&gt;(coc-range-select)</span><br><span class="line">xmap &lt;silent&gt; &lt;C-d&gt; &lt;Plug&gt;(coc-range-select)</span><br><span class="line"></span><br><span class="line">" Use `:Format` to format current buffer</span><br><span class="line">command! -nargs=0 Format :call CocAction('format')</span><br><span class="line"></span><br><span class="line">" Use `:Fold` to fold current buffer</span><br><span class="line">command! -nargs=? Fold :call     CocAction('fold', &lt;f-args&gt;)</span><br><span class="line"></span><br><span class="line">" use `:OR` for organize import of current buffer</span><br><span class="line">command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')</span><br><span class="line"></span><br><span class="line">" Add status line support, for integration with other plugin, checkout `:h coc-status`</span><br><span class="line">set statusline^=%&#123;coc#status()&#125;%&#123;get(b:,'coc_current_function','')&#125;</span><br><span class="line"></span><br><span class="line">" Using CocList</span><br><span class="line">" Show all diagnostics</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;a  :&lt;C-u&gt;CocList diagnostics&lt;cr&gt;</span><br><span class="line">" Manage extensions</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;e  :&lt;C-u&gt;CocList extensions&lt;cr&gt;</span><br><span class="line">" Show commands</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;c  :&lt;C-u&gt;CocList commands&lt;cr&gt;</span><br><span class="line">" Find symbol of current document</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;o  :&lt;C-u&gt;CocList outline&lt;cr&gt;</span><br><span class="line">" Search workspace symbols</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;s  :&lt;C-u&gt;CocList -I symbols&lt;cr&gt;</span><br><span class="line">" Do default action for next item.</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;j  :&lt;C-u&gt;CocNext&lt;CR&gt;</span><br><span class="line">" Do default action for previous item.</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;k  :&lt;C-u&gt;CocPrev&lt;CR&gt;</span><br><span class="line">" Resume latest coc list</span><br><span class="line">nnoremap &lt;silent&gt; &lt;space&gt;p  :&lt;C-u&gt;CocListResume&lt;CR&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>其中<code>go1.14.linux-amd64.tar.gz</code>是下载的文件名，这里是linux版本1.14</p>
+<p>其中<code>coc</code>插件可能报错，可以尝试进入<code>~/.vim/plugged/coc.nvim</code>执行<code>yarn install</code></p>
 </blockquote>
-<h1 id="使用-spacevim-配置-vim-nvim"><a href="#使用-spacevim-配置-vim-nvim" class="headerlink" title="使用 spacevim 配置 vim/nvim"></a>使用 spacevim 配置 vim/nvim</h1><p>nvim官网：<a href="https://neovim.io/" target="_blank" rel="noopener">https://neovim.io/</a></p>
-<p>使用shell安装nvim：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install neovim</span><br></pre></td></tr></table></figure>
-<p>spacevim官网：<a href="https://spacevim.org" target="_blank" rel="noopener">https://spacevim.org</a></p>
-<p>使用shell安装spacevim：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sLf https://spacevim.org/install.sh | bash</span><br></pre></td></tr></table></figure>
-<p>安装后，需要安装<code>golang layer</code>，修改 <code>~/.SpaceVim.d/init.toml</code>，如果没有先打开<code>nvim</code>，命令行输入<code>nvim</code>即可，<br>添加一下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[layers]]</span><br><span class="line">name = "lang#go"</span><br></pre></td></tr></table></figure>
-<p>重新启动nvim，插件会自动安装下载</p>
-<h1 id="配置-powerlevel9k"><a href="#配置-powerlevel9k" class="headerlink" title="配置 powerlevel9k"></a>配置 <code>powerlevel9k</code></h1><p>将一下内容添加到 <code>~/.zshrc</code>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POWERLEVEL9K_MODE="nerdfont-complete"</span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)</span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()</span><br><span class="line">POWERLEVEL9K_PROMPT_ADD_NEWLINE=true</span><br></pre></td></tr></table></figure>
-<p>执行 <code>source ~/.zshrc</code> 使修改生效</p>
-<p>安装vim go的必要的二进制文件<br>进入nvim nvim</p>
-<p>键入 <code>:GoInstallBinaries</code> 然后回车，<code>nvim</code>会自动下载编译二进制文件</p>
-<p>如果安装失败，提示超时，可以自己复制包地址，在设置代理后，在命令行自行下载</p>
-<p>设置Golang代理</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export GOPROXY="https://mirrors.aliyun.com/goproxy/"</span><br><span class="line"></span><br><span class="line">export GO111MODULE="on"</span><br></pre></td></tr></table></figure>
-<p>执行 <code>source ~/.zshrc</code> 使修改生效</p>
+<h2 id="安装其他插件"><a href="#安装其他插件" class="headerlink" title="安装其他插件"></a>安装其他插件</h2><p>今天nvim后输入<code>:PlugInstall</code>来安装插件，其中报错不用在意，因为插件没有安装但是加载了插件配置。</p>
 
       
     </div>
@@ -599,7 +536,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/zhangwei.ink/2020/01/15/Mac-配置Golang开发环境/" title="Mac 配置Golang开发环境">zhangwei.ink/2020/01/15/Mac-配置Golang开发环境/</a>
+    <a href="/zhangwei.ink/2020/03/17/配置VIM/" title="配置 vim 作为 golang IDE">zhangwei.ink/2020/03/17/配置VIM/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -612,7 +549,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Golang/" rel="tag"># Golang</a>
+            <a href="/tags/VIM/" rel="tag"># VIM</a>
           
         </div>
       
@@ -625,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/01/gogs-config/" rel="next" title="Gogs 配置说明">
-                <i class="fa fa-chevron-left"></i> Gogs 配置说明
+              <a href="/2020/01/15/Mac-配置Golang开发环境/" rel="next" title="Mac 配置Golang开发环境">
+                <i class="fa fa-chevron-left"></i> Mac 配置Golang开发环境
               </a>
             
           </div>
@@ -634,10 +571,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/17/配置VIM/" rel="prev" title="配置 vim 作为 golang IDE">
-                配置 vim 作为 golang IDE <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -864,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-brew"><span class="nav-number">1.</span> <span class="nav-text">安装 brew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-iTerm2"><span class="nav-number">2.</span> <span class="nav-text">安装 iTerm2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-zsh-和-oh-my-zsh"><span class="nav-number">3.</span> <span class="nav-text">安装 zsh 和 oh-my-zsh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-oh-my-zsh-的插件"><span class="nav-number">4.</span> <span class="nav-text">安装 oh-my-zsh 的插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-zsh-syntax-highlighting"><span class="nav-number">4.1.</span> <span class="nav-text">安装 zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-zsh-autosuggestions"><span class="nav-number">4.2.</span> <span class="nav-text">安装 zsh-autosuggestions</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-powerlevel9k-主题"><span class="nav-number">5.</span> <span class="nav-text">安装 powerlevel9k 主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-dejavu-sans-mono-for-powerline-和-Hack-Nerd-Font-字体"><span class="nav-number">6.</span> <span class="nav-text">安装 dejavu sans mono for powerline 和 Hack Nerd Font 字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-golang"><span class="nav-number">7.</span> <span class="nav-text">安装 golang</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-spacevim-配置-vim-nvim"><span class="nav-number">8.</span> <span class="nav-text">使用 spacevim 配置 vim/nvim</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置-powerlevel9k"><span class="nav-number">9.</span> <span class="nav-text">配置 powerlevel9k</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置-vim-作为-golang-IDE"><span class="nav-number">1.</span> <span class="nav-text">配置 vim 作为 golang IDE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vim的插件管理器"><span class="nav-number">1.1.</span> <span class="nav-text">安装vim的插件管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nvim-共用-vim-的插件目录和配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">nvim 共用 vim 的插件目录和配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改-vimrc文件"><span class="nav-number">1.3.</span> <span class="nav-text">修改.vimrc文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装其他插件"><span class="nav-number">1.4.</span> <span class="nav-text">安装其他插件</span></a></li></ol></li></ol></div>
             
 
           </div>
