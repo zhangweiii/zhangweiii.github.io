@@ -96,20 +96,18 @@
 
 
 
-  <meta name="description" content="说明近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。 一、准备工作1.首先要下载OpenSSL，解压到你喜欢的地方 2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面  此时就">
-<meta name="keywords" content="OpenSSL">
+  <meta name="description" content="Golang 语言特点Golang是编译型语言，特点简单和快，有着类似Python的简洁易编写和类似C++的运行速度。可跨平台编译，高效率的协程和简单的通道，使得高并发程序简单又高效。以下是Golang版的Hello World 第一个Golang程序1234567package main  // 声明包名mainimport &quot;fmt&quot;  // 导入golang标准库包fmtfunc main(">
+<meta name="keywords" content="Go学记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用OpenSSL生成pfx&#x2F;cer&#x2F;crt证书">
-<meta property="og:url" content="zhangwei.ink/2018/03/12/使用OpenSSL生成pfx-cer-crt证书/index.html">
+<meta property="og:title" content="Hello Golang">
+<meta property="og:url" content="zhangwei.ink/2020/04/23/go-hello-world/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="说明近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。 一、准备工作1.首先要下载OpenSSL，解压到你喜欢的地方 2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面  此时就">
+<meta property="og:description" content="Golang 语言特点Golang是编译型语言，特点简单和快，有着类似Python的简洁易编写和类似C++的运行速度。可跨平台编译，高效率的协程和简单的通道，使得高并发程序简单又高效。以下是Golang版的Hello World 第一个Golang程序1234567package main  // 声明包名mainimport &quot;fmt&quot;  // 导入golang标准库包fmtfunc main(">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1679732-4757e13b57e5231f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-10-29T13:44:07.361Z">
+<meta property="og:updated_time" content="2020-04-23T08:15:49.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用OpenSSL生成pfx&#x2F;cer&#x2F;crt证书">
-<meta name="twitter:description" content="说明近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。 一、准备工作1.首先要下载OpenSSL，解压到你喜欢的地方 2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面  此时就">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1679732-4757e13b57e5231f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Hello Golang">
+<meta name="twitter:description" content="Golang 语言特点Golang是编译型语言，特点简单和快，有着类似Python的简洁易编写和类似C++的运行速度。可跨平台编译，高效率的协程和简单的通道，使得高并发程序简单又高效。以下是Golang版的Hello World 第一个Golang程序1234567package main  // 声明包名mainimport &quot;fmt&quot;  // 导入golang标准库包fmtfunc main(">
 
 
 
@@ -117,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="zhangwei.ink/2018/03/12/使用OpenSSL生成pfx-cer-crt证书/"/>
+  <link rel="canonical" href="zhangwei.ink/2020/04/23/go-hello-world/"/>
 
 
 
@@ -127,7 +125,7 @@
   };
 </script>
 
-  <title>使用OpenSSL生成pfx/cer/crt证书 | 学习笔记</title>
+  <title>Hello Golang | 学习笔记</title>
   
 
 
@@ -391,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="zhangwei.ink/2018/03/12/使用OpenSSL生成pfx-cer-crt证书/"/>
+    <link itemprop="mainEntityOfPage" href="zhangwei.ink/2020/04/23/go-hello-world/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhangweiii"/>
@@ -408,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">使用OpenSSL生成pfx/cer/crt证书
+          <h2 class="post-title" itemprop="name headline">Hello Golang
 
               
             
@@ -434,24 +432,12 @@
                 
               
 
-              <time title="创建时间：2018-03-12 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-12T00:00:00+08:00">2018-03-12</time>
+              <time title="创建时间：2020-04-23 00:00:00 / 修改时间：16:15:49" itemprop="dateCreated datePublished" datetime="2020-04-23T00:00:00+08:00">2020-04-23</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-29 21:44:07" itemprop="dateModified" datetime="2019-10-29T21:44:07+08:00">2019-10-29</time>
               
             
           </span>
@@ -468,7 +454,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Go学记/" itemprop="url" rel="index"><span itemprop="name">Go学记</span></a></span>
 
                 
                 
@@ -476,6 +462,9 @@
             </span>
           
 
+          
+            
+            
           
 
           
@@ -500,28 +489,30 @@
       
 
       
-        <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>近期由于我们的网站需要手机端，然后IOS端接口必须要使用https，所以就有了自己生成证书的需要，下面就是整个过程，上网找了好久，都不全，下面总结记录下。</p>
-<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>1.首先要下载OpenSSL，解压到你喜欢的地方</p>
-<p>2.管理员身份打开cmd，cd到OpenSSL的bin目录（如果你将bin添加到环境变量的话，那就直接输入OpenSSL）输入OpenSSL回车，你会看到类似下面的界面</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1679732-4757e13b57e5231f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开OpenSSL界面"></p>
-<p>此时就可以输入OpenSSL命令了</p>
-<h1 id="二、生成key"><a href="#二、生成key" class="headerlink" title="二、生成key"></a>二、生成key</h1><p>输入<code>genrsa -out openssl.key 1024</code>生成openssl.key文件。</p>
+        <h2 id="Golang-语言特点"><a href="#Golang-语言特点" class="headerlink" title="Golang 语言特点"></a>Golang 语言特点</h2><p>Golang是编译型语言，特点简单和快，有着类似<code>Python</code>的简洁易编写和类似<code>C++</code>的运行速度。可跨平台编译，高效率的协程和简单的通道，使得高并发程序简单又高效。以下是Golang版的<code>Hello World</code></p>
+<h2 id="第一个Golang程序"><a href="#第一个Golang程序" class="headerlink" title="第一个Golang程序"></a>第一个Golang程序</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main  <span class="comment">// 声明包名main</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span>  <span class="comment">// 导入golang标准库包fmt</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; <span class="comment">// main函数，程序入口</span></span><br><span class="line">    fmt.Println(<span class="string">"Hello World!"</span>)  <span class="comment">// 打印</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一个可直接运行的Golang程序必须有<code>main</code>包和<code>main</code>函数，否则会报以下错误</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以下是没有main包报的错误</span></span><br><span class="line">go run: cannot run non-main package</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下是没有main函数报的错误</span></span><br><span class="line"><span class="comment"># command-line-arguments</span></span><br><span class="line">runtime.main_main·f: <span class="keyword">function</span> main is undeclared <span class="keyword">in</span> the main package</span><br></pre></td></tr></table></figure>
+<h2 id="执行Golang程序"><a href="#执行Golang程序" class="headerlink" title="执行Golang程序"></a>执行Golang程序</h2><p>假设将它保存为<code>hello.go</code>，要使它运行，命令行键入<code>go run hello.go</code>，程序会输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>openssl.key为key的名字随意起，1024为密钥长度</p>
+<p>你也可以到这里亲自运行一下看看<a href="https://play.studygolang.com/p/4em_C0unFEW" target="_blank" rel="noopener">play.studygolang.com</a></p>
 </blockquote>
-<h1 id="三、生成cer证书"><a href="#三、生成cer证书" class="headerlink" title="三、生成cer证书"></a>三、生成cer证书</h1><p>接着输入<code>req -new -x509 -key openssl.key -out openssl.cer -days 3650 -subj /CN=zhangwei.website</code></p>
+<p>你也可以编译成二进制可执行程序，执行以下命令编辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go build hello.go</span><br></pre></td></tr></table></figure>
+<p>执行后，同级目录下会多一个<code>hello</code>可执行程序，输入一下命令执行这个程序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello</span><br></pre></td></tr></table></figure>
+<p>程序输出结果会和<code>go run</code>命令结果一样</p>
+<h2 id="交叉编译"><a href="#交叉编译" class="headerlink" title="交叉编译"></a>交叉编译</h2><p>你还可以进行交叉编译，就比如Mac平台编译为Linux平台的可执行程序，分别有以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go     <span class="comment"># Mac 编译成 Linux 执行程序</span></span><br><span class="line">CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go   <span class="comment"># Mac 编译成 Windows 执行程序</span></span><br><span class="line"></span><br><span class="line">CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build main.go    <span class="comment"># Linux 编译成 Mac 执行程序</span></span><br><span class="line">CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go   <span class="comment"># Linux 编译成 Windows 执行程序</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows 编译成 Mac 执行程序</span></span><br><span class="line">SET CGO_ENABLED=0</span><br><span class="line">SET GOOS=darwin</span><br><span class="line">SET GOARCH=amd64</span><br><span class="line">go build main.go</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows 编译成 Linux 执行程序</span></span><br><span class="line">SET CGO_ENABLED=0</span><br><span class="line">SET GOOS=linux</span><br><span class="line">SET GOARCH=amd64</span><br><span class="line">go build main.go</span><br></pre></td></tr></table></figure>
+<p><code>CGO_ENABLED=0</code>是禁用CGO，因为交叉编译不支持<br><code>GOOS</code>是指定目标平台，分别有darwin/freebsd/linux/windows<br><code>GOARCH</code>是指目标平台的架构，有386/amd64/arm等</p>
+<h2 id="包、main函数、init函数"><a href="#包、main函数、init函数" class="headerlink" title="包、main函数、init函数"></a>包、main函数、init函数</h2><p>多说一下，包就是其它语言库或模块，一般包名和文件夹名字统一，包下有一些<code>.go</code>源码文件，包中变量或函数首字母大写为<code>public</code>，也就是包外可以使用。<code>main</code>函数就是入口函数，值得一说的是每个包里都可以有一个或多个<code>init</code>函数，<code>init</code>执行顺序会优先于<code>main</code>函数，多个<code>init</code>会顺序执行，示例代码如下</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"First init function called"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Secend init function called"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Main function called"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">First init <span class="keyword">function</span> called</span><br><span class="line">Secend init <span class="keyword">function</span> called</span><br><span class="line">Main <span class="keyword">function</span> called</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>openssl.key为之前生成的key的名字，openssl.cer为生成的证书名字，3650为证书过期天数，CN的参数zhangwei.website是的你主机名或者IP地址(这里一定要写对，不然以后访问的话，浏览器会提示有风险)。</p>
+<p>你也可以到这里亲自运行一下看看<a href="https://play.studygolang.com/p/1v2U-azVuVp" target="_blank" rel="noopener">play.studygolang.com</a></p>
 </blockquote>
-<p>这样就生成了证书文件openssl.cer</p>
-<h1 id="四、生成IIS需要的PFX私钥文件"><a href="#四、生成IIS需要的PFX私钥文件" class="headerlink" title="四、生成IIS需要的PFX私钥文件"></a>四、生成IIS需要的PFX私钥文件</h1><p>输入<code>pkcs12 -export -out openssl.pfx -inkey openssl.key -in openssl.cer</code></p>
-<p>会让你输入密码，使用私钥时候使用的（千万不能忘记）。<br>这样就生成了私钥文件openssl.pfx。</p>
-<h1 id="五、生成了crt证书"><a href="#五、生成了crt证书" class="headerlink" title="五、生成了crt证书"></a>五、生成了crt证书</h1><p>由于手机需要crt证书，所以需要的话还要生成crt<br>输入<code>req -new -x509 -key openssl.key -out openssl.crt -days 3650</code></p>
-<h1 id="六、将pfx证书导入IIS"><a href="#六、将pfx证书导入IIS" class="headerlink" title="六、将pfx证书导入IIS"></a>六、将pfx证书导入IIS</h1><p>打开IIS管理器点击网站，右侧会有一堆图标，找到服务器证书，点进去会发现有一个默认的证书叫localhost，不管它，右键导入证书，然后选择<code>openssl.pfx</code>这个文件就可以了，选不到的话，就把文件类型改为*</p>
-<p>点击导入…</p>
-<p>选择openssl.pfx文件输入生成时输入的密码</p>
-<h1 id="七、将证书绑定到你的网站"><a href="#七、将证书绑定到你的网站" class="headerlink" title="七、将证书绑定到你的网站"></a>七、将证书绑定到你的网站</h1><p>点击你的网站，在最右侧点击绑定，会弹出一个IP列表的窗口，点击添加，选择https，然后下面证书选择刚刚导入的证书</p>
-<p>这样Https站点就建立完成了，安装了openssl.cer证书的客户端就可以安全访问了。<br>手机端用的是crt</p>
 
       
     </div>
@@ -556,7 +547,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="/zhangwei.ink/2018/03/12/使用OpenSSL生成pfx-cer-crt证书/" title="使用OpenSSL生成pfx/cer/crt证书">zhangwei.ink/2018/03/12/使用OpenSSL生成pfx-cer-crt证书/</a>
+    <a href="/zhangwei.ink/2020/04/23/go-hello-world/" title="Hello Golang">zhangwei.ink/2020/04/23/go-hello-world/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -569,7 +560,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OpenSSL/" rel="tag"># OpenSSL</a>
+            <a href="/tags/Go学记/" rel="tag"># Go学记</a>
           
         </div>
       
@@ -582,15 +573,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/03/18/fzf/" rel="next" title="vim 插件 fzf 安装使用">
+                <i class="fa fa-chevron-left"></i> vim 插件 fzf 安装使用
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/12/vim-使用记录/" rel="prev" title="vim 使用记录">
-                vim 使用记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -611,6 +602,14 @@
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -815,7 +814,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、准备工作"><span class="nav-number">2.</span> <span class="nav-text">一、准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、生成key"><span class="nav-number">3.</span> <span class="nav-text">二、生成key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、生成cer证书"><span class="nav-number">4.</span> <span class="nav-text">三、生成cer证书</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、生成IIS需要的PFX私钥文件"><span class="nav-number">5.</span> <span class="nav-text">四、生成IIS需要的PFX私钥文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、生成了crt证书"><span class="nav-number">6.</span> <span class="nav-text">五、生成了crt证书</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、将pfx证书导入IIS"><span class="nav-number">7.</span> <span class="nav-text">六、将pfx证书导入IIS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、将证书绑定到你的网站"><span class="nav-number">8.</span> <span class="nav-text">七、将证书绑定到你的网站</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-语言特点"><span class="nav-number">1.</span> <span class="nav-text">Golang 语言特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个Golang程序"><span class="nav-number">2.</span> <span class="nav-text">第一个Golang程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行Golang程序"><span class="nav-number">3.</span> <span class="nav-text">执行Golang程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交叉编译"><span class="nav-number">4.</span> <span class="nav-text">交叉编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包、main函数、init函数"><span class="nav-number">5.</span> <span class="nav-text">包、main函数、init函数</span></a></li></ol></div>
             
 
           </div>
@@ -969,6 +968,43 @@
 
   
 
+
+  
+    
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"/>
+
+
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/js-md5@0/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '63743e3bf62e96182169',
+    clientSecret: '7a1303c73e306ee96c383ca71a91967d9b69b1ca',
+    repo: 'zhangwei-ink-comments',
+    owner: 'zhangweiii',
+    admin: ['zhangweiii'],
+    id: md5(location.pathname),
+    
+      language: 'zh-CN',
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
 
   

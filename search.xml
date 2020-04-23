@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hello Golang]]></title>
+    <url>%2F2020%2F04%2F23%2Fgo-hello-world%2F</url>
+    <content type="text"><![CDATA[Golang 语言特点Golang是编译型语言，特点简单和快，有着类似Python的简洁易编写和类似C++的运行速度。可跨平台编译，高效率的协程和简单的通道，使得高并发程序简单又高效。以下是Golang版的Hello World 第一个Golang程序1234567package main // 声明包名mainimport "fmt" // 导入golang标准库包fmtfunc main() &#123; // main函数，程序入口 fmt.Println("Hello World!") // 打印&#125; 一个可直接运行的Golang程序必须有main包和main函数，否则会报以下错误 123456# 以下是没有main包报的错误go run: cannot run non-main package# 以下是没有main函数报的错误# command-line-argumentsruntime.main_main·f: function main is undeclared in the main package 执行Golang程序假设将它保存为hello.go，要使它运行，命令行键入go run hello.go，程序会输出 1Hello World! 你也可以到这里亲自运行一下看看play.studygolang.com 你也可以编译成二进制可执行程序，执行以下命令编辑 1go build hello.go 执行后，同级目录下会多一个hello可执行程序，输入一下命令执行这个程序 1./hello 程序输出结果会和go run命令结果一样 交叉编译你还可以进行交叉编译，就比如Mac平台编译为Linux平台的可执行程序，分别有以下命令 1234567891011121314151617CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go # Mac 编译成 Linux 执行程序CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go # Mac 编译成 Windows 执行程序CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build main.go # Linux 编译成 Mac 执行程序CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go # Linux 编译成 Windows 执行程序# Windows 编译成 Mac 执行程序SET CGO_ENABLED=0SET GOOS=darwinSET GOARCH=amd64go build main.go# Windows 编译成 Linux 执行程序SET CGO_ENABLED=0SET GOOS=linuxSET GOARCH=amd64go build main.go CGO_ENABLED=0是禁用CGO，因为交叉编译不支持GOOS是指定目标平台，分别有darwin/freebsd/linux/windowsGOARCH是指目标平台的架构，有386/amd64/arm等 包、main函数、init函数多说一下，包就是其它语言库或模块，一般包名和文件夹名字统一，包下有一些.go源码文件，包中变量或函数首字母大写为public，也就是包外可以使用。main函数就是入口函数，值得一说的是每个包里都可以有一个或多个init函数，init执行顺序会优先于main函数，多个init会顺序执行，示例代码如下 1234567891011121314151617package mainimport ( "fmt")func init() &#123; fmt.Println("First init function called")&#125;func init() &#123; fmt.Println("Secend init function called")&#125;func main() &#123; fmt.Println("Main function called")&#125; 执行结果 123First init function calledSecend init function calledMain function called 你也可以到这里亲自运行一下看看play.studygolang.com]]></content>
+      <categories>
+        <category>Go学记</category>
+      </categories>
+      <tags>
+        <tag>Go学记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vim 插件 fzf 安装使用]]></title>
     <url>%2F2020%2F03%2F18%2Ffzf%2F</url>
     <content type="text"><![CDATA[vim 插件 fzf 安装使用fzf安装在vim-plug插件管理器中添加如下内容 12Plug 'junegunn/fzf', &#123; 'dir': '~/.fzf', 'do': './install --all' &#125;,Plug 'junegunn/fzf.vim', 重新打开vim后输入:PlugInstall来安装fzf fzf 命令： 命令 列出 :Files [path] 列出path路径下的所有文件 (功能等价于 :FZF 命令) :Buffers 文件缓冲区切换 :Colors 选择Vim配色方案 :Tags [QUERY] 当前项目中的Tag (等价于：ctags -R) :BTags [QUERY] 当前活动缓冲区的标记 :Marks 所有Vim标记 :Windows 窗口 :Lines [QUERY] 在所有加载的文件缓冲区里包含目标词的所有行 BLines [QUERY] 在当前文件缓冲区里包含目标词的行 Locate PATTERN locate command output History v:oldfiles and open buffers History: 命令行命令历史 History/ 搜索历史 Commands Vim命令列表 Maps 普通模式下的按键映射 Snippets Snippets ([UltiSnips][us]) Commits Git commits (requires [fugitive.vim][f]) BCommits Git commits for the current buffer GFiles [OPTS] Git files (git ls-files) GFiles? Git files (git status) Ag [PATTERN] [ag][ag] search result (ALT-A to select all, ALT-D to deselect all) Rg [PATTERN] [rg][rg] search result (ALT-A to select all, ALT-D to deselect all) Filetypes File types]]></content>
@@ -102,17 +113,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[安装 oh my zsh]]></title>
-    <url>%2F2018%2F03%2F12%2FMac%20%E5%AE%89%E8%A3%85%20oh-my-zsh%2F</url>
-    <content type="text"><![CDATA[1. 安装 zsh + oh-my zsh1sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 或者： 1sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 2. 安装 Tomorrow OS X Terminal Color Schemas https://github.com/chriskempson/tomorrow-theme 直接访问上面的链接地址下载即可，对于 OS X Terminal 的，直接下载之后，双击安装即可，如果觉得麻烦，也可以直接下载我打包好的： Tomorrow OS X Terminal Color Schemas.zip 3. 安装 Pure1npm install --global pure-prompt 安装完成之后，进入到 oh-my-zsh 的 custom 目录下，我的就是默认的，然后： 1ln -s /path/to/pure.zsh 之后修改 oh-my-zsh 的主题为 pure 1vi ~/.zshrc 修改： 1ZSH_THEME="pure"` 4. 安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc 1plugins = (...plugins zsh-syntax-highlighting)]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>oh my zsh</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[JavaScript 扩展]]></title>
     <url>%2F2018%2F03%2F12%2FExtendJS%2F</url>
     <content type="text"><![CDATA[JavaScript 扩展记录备用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162(function (d, w, $) &#123; Date.prototype.addDays = function (days) &#123; var dat = new Date(this.valueOf()); dat.setDate(dat.getDate() + days); return dat; &#125; Date.prototype.AddMonth = function (numberOfMonths) &#123; var d = this; if (d.getMonth() + numberOfMonths + 1 === 0) &#123; d.setFullYear(d.getFullYear() - 1, 11); return d; &#125; else &#123; d.setMonth(d.getMonth() + numberOfMonths + 1); return d; &#125; &#125; Date.prototype.Format = function (fmt) &#123; var o = &#123; "M+": this.getMonth() + 1, "d+": this.getDate(), "h+": this.getHours(), "m+": this.getMinutes(), "s+": this.getSeconds(), "q+": Math.floor((this.getMonth() + 3) / 3), "S": this.getMilliseconds() &#125;; if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length)); for (var k in o) if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length))); return fmt; &#125; $.deepClone = function (source) &#123; if(!source || typeof source !== 'object')&#123; throw new Error('error arguments', 'shallowClone'); &#125; var targetObj = source.constructor === Array ? [] : &#123;&#125;; for(var keys in source)&#123; if(source.hasOwnProperty(keys))&#123; if(source[keys] &amp;&amp; typeof source[keys] === 'object')&#123; targetObj[keys] = source[keys].constructor === Array ? [] : &#123;&#125;; targetObj[keys] = $.deepClone(source[keys]); &#125;else&#123; targetObj[keys] = source[keys]; &#125; &#125; &#125; return targetObj; &#125; $.createElementFromHTML(htmlString) &#123; var div = document.createElement('div'); div.innerHTML = htmlString.trim(); // Change this to div.childNodes to support multiple top-level nodes return div.firstChild; &#125;&#125;)(document, window, $);]]></content>
@@ -121,6 +121,17 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装 oh my zsh]]></title>
+    <url>%2F2018%2F03%2F12%2FMac%20%E5%AE%89%E8%A3%85%20oh-my-zsh%2F</url>
+    <content type="text"><![CDATA[1. 安装 zsh + oh-my zsh1sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 或者： 1sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 2. 安装 Tomorrow OS X Terminal Color Schemas https://github.com/chriskempson/tomorrow-theme 直接访问上面的链接地址下载即可，对于 OS X Terminal 的，直接下载之后，双击安装即可，如果觉得麻烦，也可以直接下载我打包好的： Tomorrow OS X Terminal Color Schemas.zip 3. 安装 Pure1npm install --global pure-prompt 安装完成之后，进入到 oh-my-zsh 的 custom 目录下，我的就是默认的，然后： 1ln -s /path/to/pure.zsh 之后修改 oh-my-zsh 的主题为 pure 1vi ~/.zshrc 修改： 1ZSH_THEME="pure"` 4. 安装 zsh-syntax-highlighting1git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting 修改 ~/.zshrc 1plugins = (...plugins zsh-syntax-highlighting)]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>oh my zsh</tag>
       </tags>
   </entry>
   <entry>
@@ -146,17 +157,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[利用ssh传输文件]]></title>
-    <url>%2F2018%2F03%2F12%2Fscp-%E4%BC%A0%E9%80%81%E6%96%87%E4%BB%B6%2F</url>
-    <content type="text"><![CDATA[利用ssh传输文件在linux下一般用scp这个命令来通过ssh传输文件。 1、从服务器上下载文件1scp username@servername:/path/filename /var/www/local_dir #(本地目录) 例如scp root@192.168.0.101:/var/www/test.txt 把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录） 2、上传本地文件到服务器1scp /path/filename username@servername:/path 例如scp /var/www/test.php root@192.168.0.101:/var/www/ 把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中 3、从服务器下载整个目录1scp -r username@servername:/var/www/remote_dir/(远程目录) /var/www/local_dir (本地目录) 例如:scp -r root@192.168.0.101:/var/www/test /var/www/ 4、上传目录到服务器1scp -r local_dir username@servername:remote_dir 例如：scp -r test root@192.168.0.101:/var/www/ 把当前目录下的test目录上传到服务器的/var/www/ 目录]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[SSH 免密登录远程服务器]]></title>
     <url>%2F2018%2F03%2F12%2Fssh-%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[在本地机器创建公钥打开万能的终端，执行如下命令，无视一切输出，一路欢快地回车即可。 1ssh-keygen -t rsa -C 'your email@domain.com' -t 指定密钥类型，默认即 rsa ，可以省略-C 设置注释文字，比如你的邮箱 2. 将公钥复制到ssh服务器将前一步骤生成的公钥~/id_rsa.pub文件，复制到ssh服务器对应用户下的~/.ssh/authorized_keys文件,可以有多种方式，这里只介绍常用的三种。 [适用于osx系统]使用ssh-copy-id-for-OSX工具将公钥复制至ssh服务器 12brew install ssh-copy-idssh-copy-id username@hostname #将username和hostname替换为你的ssh服务器用户名和IP 当ssh服务器username用户目录下尚未有.ssh目录时使用此方式 1cat ~/.ssh/id_rsa.pub | ssh username@hostname "mkdir ~/.ssh; cat &gt;&gt; ~/.ssh/authorized_keys" 通用方式 1234scp ~/.ssh/id_rsa.pub username@hostname:~/ #将公钥文件复制至ssh服务器ssh username@hostname #使用用户名和密码方式登录至ssh服务器mkdir .ssh #若.ssh目录已存在，可省略此步cat id_rsa.pub &gt;&gt; .ssh/authorized_keys #将公钥文件id_rsa.pub文件内容追加到authorized_keys文件 3. 快捷登录完成以上步骤后，即可使用以下命令直接登录ssh服务器，妈妈再也不用担心你记不住密码了 1ssh username@hostname #将username替换为你的ssh服务器用户名，hostname替换为服务器的ip 但是，每次仍然需要输入ssh username@hostname，仍算不上最优的解决方案，要是能实现一键登录或一条命令登录最好不过了，下面来看看都有那些解决方法 ssh本身也提供了一种快捷的方式来解决这个问题，往~/.ssh/config配置文件添加你的ssh服务器信息即可 1vim ~/.ssh/config #若没有该文件，直接新建即可 添加文件内容格式如下： 12345Host alias #自定义别名 HostName hostname #替换为你的ssh服务器ip或domain Port port #ssh服务器端口，默认为22 User user #ssh服务器用户名 IdentityFile ~/.ssh/id_rsa #第一个步骤生成的公钥文件对应的私钥文件 保存文件退出后，即可使用别名登录ssh服务器 1ssh alias #alias是你在~/.ssh/config文件配置的别名 若有多个ssh账号需要配置，只要在~/.ssh/config空行再写即可，如下: 12345678910Host foo HostName 192.168.2.222 Port 22 User test IdentityFile ~/.ssh/id_rsaHost alias HostName hostname Port port User user 如果你本地终端使用的是zsh，那就太简单不过了，直接给zsh添加一条别名 123echo "alias ssh-to-username='ssh username@hostname'" &gt;&gt; ~/.zshrc #将username和hostname替换为你的服务器信息source ~/.zshrc #重新加载更改后的zshrc文件ssh-to-username #使用别名，一条命令即可登录你的ssh服务器 如果你本地终端使用的是iterm2还可以添加Profile实现一键登录，具体步骤此处略过参考链接]]></content>
@@ -176,6 +176,17 @@
       </categories>
       <tags>
         <tag>nerdtree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[利用ssh传输文件]]></title>
+    <url>%2F2018%2F03%2F12%2Fscp-%E4%BC%A0%E9%80%81%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[利用ssh传输文件在linux下一般用scp这个命令来通过ssh传输文件。 1、从服务器上下载文件1scp username@servername:/path/filename /var/www/local_dir #(本地目录) 例如scp root@192.168.0.101:/var/www/test.txt 把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录） 2、上传本地文件到服务器1scp /path/filename username@servername:/path 例如scp /var/www/test.php root@192.168.0.101:/var/www/ 把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中 3、从服务器下载整个目录1scp -r username@servername:/var/www/remote_dir/(远程目录) /var/www/local_dir (本地目录) 例如:scp -r root@192.168.0.101:/var/www/test /var/www/ 4、上传目录到服务器1scp -r local_dir username@servername:remote_dir 例如：scp -r test root@192.168.0.101:/var/www/ 把当前目录下的test目录上传到服务器的/var/www/ 目录]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
